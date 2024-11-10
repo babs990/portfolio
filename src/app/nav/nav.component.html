@@ -1,0 +1,63 @@
+<div class="flex h-[60px] items-center justify-center max-[1080px]:justify-between max-[1080px]:px-[60px] max-sm:px-[14px] border-b-[1px] border-[#f973161a]">
+    <div>
+        <img ngSrc="logoBabs.png" alt="logo" width="40" height="40" class="cursor-pointer" priority="high">
+    </div>
+    <div class="flex text-white font-bold text-sm gap-[30px] ml-[390px] mr-[390px] max-[1080px]:hidden">
+        <div 
+          id="apropos" 
+          class="cursor-pointer hover:text-orange-500 duration-200 overflow-hidden"
+          (mouseenter)="revealApropos()"
+          (mouseleave)="hideApropos()"
+        >
+            A propos
+            <div class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"></div>
+        </div>
+        <div 
+          id="projets" 
+          class="cursor-pointer hover:text-orange-500 duration-200 overflow-hidden"
+          (mouseenter)="revealProjets()"
+          (mouseleave)="hideProjets()"
+        >
+            Projets
+            <div class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"></div>
+        </div>
+        <div 
+          id="articles" 
+          class="cursor-pointer hover:text-orange-500 duration-200 overflow-hidden"
+          (mouseenter)="revealArticles()"
+          (mouseleave)="hideArticles()"
+        >
+            Articles
+            <div class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"></div>
+        </div>
+    </div>
+    <div class="max-[1080px]:hidden">
+        <img ngSrc="nocturne.svg" alt="icon" width="30" height="30" class="cursor-pointer">
+    </div>
+
+    <!-- dropIcon -->
+    <div 
+      class="hidden max-[1080px]:block cursor-pointer"
+      (click)="revealDrop()"
+    >
+        <img ngSrc="drop.svg" alt="dropMenu" width="26" height="23">
+    </div>
+
+    <!-- dropList -->
+    <div id="dropList" class="absolute animate-fadeIn hidden bg-[#f97416] px-4 py-5 top-[65px] right-[10px] text-white rounded-2xl">
+        <img ngSrc="close.svg" alt="close" width="15" height="15" class="ml-auto mb-2 cursor-pointer" (click)="hideDrop()">
+        <div class="cursor-pointer hover:text-stone-500 duration-200 overflow-hidden">
+          A propos
+          <div class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"></div>
+      </div>
+      <div class="cursor-pointer hover:text-stone-500 duration-200 overflow-hidden">
+          Projets
+          <div class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"></div>
+      </div>
+      <div class="cursor-pointer hover:text-stone-500 duration-200 overflow-hidden">
+          Articles
+          <div class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"></div>
+      </div>
+      <img ngSrc="nocturne.svg" alt="icon" width="30" height="30" class="cursor-pointer">
+    </div>
+</div>

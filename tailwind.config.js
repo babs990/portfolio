@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+       ombre1 : '0px 0px 50px rgba(0, 0, 0, 0.25)'     
+      },
       keyframes :{
         fadeUp : {
           "0%" : { transform : "translateY(30px) scale(0.9)", opacity : '0'},

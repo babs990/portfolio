@@ -1,8 +1,9 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, signal } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
 import { NgOptimizedImage } from '@angular/common';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { projets } from '../projet';
 
 @Component({
   selector: 'app-acceuil',
@@ -13,7 +14,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 })
 export class AcceuilComponent implements AfterViewInit{
 
-   
+  readonly projets = signal(projets)
+  
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -47,5 +49,25 @@ export class AcceuilComponent implements AfterViewInit{
         start : 'top 85%',
       }
     })
+
+    gsap.from('.projets',{
+      opacity : 0,
+      duration : 1.5,
+      scrollTrigger:{
+        trigger : '.projets',
+        start : 'top 90%',
+      }
+    })
+
+    gsap.from('.carteProjets',{
+      translateY : 100,
+      opacity : 0,
+      duration : 1.5,
+      scrollTrigger:{
+        trigger : '.projets',
+        start : 'top 65%',
+      }
+    })
+
   }
 }

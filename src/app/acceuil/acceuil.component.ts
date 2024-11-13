@@ -22,14 +22,14 @@ export class AcceuilComponent implements AfterViewInit{
 
     gsap.to('.salut', {
       translateY : -7,
-      duration : 1,
+      duration : 1.5,
       delay: 0.3,
       stagger: 0.2
     })
 
     gsap.to('.passion',{
       translateY : 0,
-      duration : 1,
+      duration : 1.5,
       delay: 0.5,
       stagger: 0.2
     })

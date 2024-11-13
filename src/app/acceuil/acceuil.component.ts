@@ -4,11 +4,12 @@ import { NgOptimizedImage } from '@angular/common';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projets } from '../projet';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-acceuil',
   standalone: true,
-  imports: [NavComponent,NgOptimizedImage],
+  imports: [NavComponent,NgOptimizedImage,FooterComponent],
   templateUrl: './acceuil.component.html',
   styleUrl: './acceuil.component.css'
 })
@@ -66,6 +67,26 @@ export class AcceuilComponent implements AfterViewInit{
       scrollTrigger:{
         trigger : '.projets',
         start : 'top 65%',
+      }
+    })
+
+    gsap.from('.imgArticle',{
+      translateX : -100,
+      opacity : 0,
+      duration : 2,
+      ease: 'bounce',
+      scrollTrigger:{
+        trigger : '.article',
+        start : 'top 95%',
+      }
+    })
+
+    gsap.from('.descArticle',{
+      translateX : 100,
+      duration : 2,
+      scrollTrigger:{
+        trigger : '.article',
+        start : 'top 95%',
       }
     })
 

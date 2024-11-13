@@ -1,9 +1,9 @@
 export const projets = [
     {
-        nom: 'B-WATCH',
-        description : 'B-WATCH est une application destinée à la vente de montre. ',
-        lien : 'https/bwatch.app',
-        img: 'bwatch.png'
+        nom: 'MBI',
+        description : 'Landing page du projet de construction de MBI app',
+        lien : 'https://ng-mbi-app.web.app/',
+        img: 'mbi.png'
     },
     {
         nom: 'Maodo',
@@ -12,9 +12,9 @@ export const projets = [
         img: 'maodo.png'
     },
     {
-        nom: 'MBI',
-        description : 'Landing page du projet de construction de MBI app',
-        lien : 'https/mbi.app',
-        img: 'mbi.png'
+        nom: 'B-WATCH',
+        description : 'B-WATCH est une application destinée à la vente de montre. ',
+        lien : 'https/bwatch.app',
+        img: 'bwatch.png'
     },
 ]

@@ -98,9 +98,9 @@
                         <div class="text-base font-light my-5 w-[231px] max-sm:text-xs">
                             {{item.description}}
                         </div>
-                        <div class="flex gap-3">
+                        <div class="flex gap-3 items-center">
                             <img ngSrc="link.svg" alt="link" width="34" height="17" class="cursor-pointer">
-                            <div class="text-base font-semibold cursor-pointer hover:text-cyan-800 duration-500">
+                            <div class="text-sm font-semibold cursor-pointer hover:text-cyan-800 duration-500">
                                 {{item.lien}}
                             </div>
                         </div>
@@ -114,6 +114,30 @@
             </div>
             <img ngSrc="fleche.svg" alt="fleche" width="12" height="26" class="max-sm:w-[6px] max-sm:h-[11px]">
         </div>
-
     </div>
+
+    <!-- Article -->
+    <div class="w-[739px] max-[900px]:w-[600px] max-sm:w-[296px] mx-auto">
+        <div class="w-[739px] rounded-[33px] bg-[#ffffff27] backdrop-blur-3xl flex justify-center gap-20 py-9 place-self-center mt-56 text-white max-[900px]:w-[600px] max-[900px]:gap-10 max-sm:grid max-sm:w-[296px] max-sm:py-5 max-sm:mt-12 overflow-hidden article">
+            <div class="w-[277px] h-[277px] bg-[#1D2025] rounded-full p-[18px] max-sm:w-[91px] max-sm:h-[91px] max-sm:p-[8px] max-sm:mx-auto imgArticle">
+                <img ngSrc="angularArticle.png" alt="angular" width="237" height="248">
+            </div>
+            <div class="w-[294px] max-sm:w-[262px] descArticle">
+                <div class="font-semibold text-3xl max-sm:text-xl">
+                    C’est quoi Angular?
+                </div>
+                <div class="text-base my-10 max-sm:text-xs max-sm:mt-5 max-sm:mb-8">
+                    Dans cette article j’explique de manière claire c’est quoi Angular ainsi que les avantages et les inconvénients de ce dernier.
+                </div>
+                <div class=" w-[220px]  h-[50px] text-2xl text-orange-500 border-[1px] border-orange-500 font-semibold bg-[#1D2025] rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm flex justify-center gap-3 mx-auto max-sm:items-center max-sm:pt-[1px]  cursor-pointer pt-2 animate-bounce hover:border-white duration-300 hover:text-white">
+                    Lire l’article
+                </div>    
+            </div>
+        </div>
+        <div class="text-base text-cyan-600 mt-8 underline underline-offset-8 mb-4 hover:text-cyan-400 duration-500 cursor-pointer">
+            Voir tous les articles
+        </div>
+    </div>
+
+    <app-footer></app-footer>
 </div>

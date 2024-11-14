@@ -40,15 +40,14 @@ export class NavComponent {
     this.element.nativeElement.querySelector('#articles').querySelector('.item').classList.add('translate-x-[60px]')
   }
 
-  revealDrop(){
-    this.element.nativeElement.querySelector('#dropList').classList.remove('hidden')
-  }
+  droplist(){
+    if(this.element.nativeElement.querySelector('#drop').classList.contains('translate-x-full')){
+      this.element.nativeElement.querySelector('#drop').classList.remove('translate-x-full')
+      this.element.nativeElement.querySelector('#dropList').classList.remove('translate-x-full')
 
-
-  hideDrop(){
-    if(!this.element.nativeElement.querySelector('#dropList').classList.contains('hidden')){
-      this.element.nativeElement.querySelector('#dropList').classList.add('hidden')
+    }else{
+      this.element.nativeElement.querySelector('#drop').classList.add('translate-x-full')
+      this.element.nativeElement.querySelector('#dropList').classList.add('translate-x-full')
     }
   }
-
 }

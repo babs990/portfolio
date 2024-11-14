@@ -99,10 +99,12 @@
                             {{item.description}}
                         </div>
                         <div class="flex gap-3 items-center">
-                            <img ngSrc="link.svg" alt="link" width="34" height="17" class="cursor-pointer">
-                            <div class="text-sm font-semibold cursor-pointer hover:text-cyan-800 duration-500">
+                            <a [href]="item.lien">
+                                <img ngSrc="link.svg" alt="link" width="34" height="17" class="cursor-pointer">
+                            </a>
+                            <a [href]="item.lien" class="text-sm font-semibold cursor-pointer hover:text-cyan-800 duration-500">
                                 {{item.lien}}
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -118,7 +120,7 @@
 
     <!-- Article -->
     <div class="w-[739px] max-[900px]:w-[600px] max-sm:w-[296px] mx-auto">
-        <div class="w-[739px] rounded-[33px] bg-[#ffffff27] backdrop-blur-3xl flex justify-center gap-20 py-9 place-self-center mt-56 text-white max-[900px]:w-[600px] max-[900px]:gap-10 max-sm:grid max-sm:w-[296px] max-sm:py-5 max-sm:mt-12 overflow-hidden article">
+        <div class="w-[739px] rounded-[33px] bg-[#ffffff27] backdrop-blur-3xl flex justify-center gap-20 py-9 place-self-center mt-56 text-white max-[900px]:w-[600px] max-[900px]:gap-10 max-sm:grid max-sm:w-[296px] max-sm:py-5 max-sm:mt-24 overflow-hidden article">
             <div class="w-[277px] h-[277px] bg-[#1D2025] rounded-full p-[18px] max-sm:w-[91px] max-sm:h-[91px] max-sm:p-[8px] max-sm:mx-auto imgArticle">
                 <img ngSrc="angularArticle.png" alt="angular" width="237" height="248">
             </div>

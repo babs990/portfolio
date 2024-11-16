@@ -1,5 +1,5 @@
-<div class="sticky top-0 bg-[#1d20256c] backdrop-blur-3xl flex h-[60px] items-center justify-center max-[1080px]:justify-between max-[1080px]:px-[60px] max-sm:px-[14px] border-b-[1px] border-[#f973161a] z-[60]">
-    <div>
+<div class="sticky top-0 bg-[#1d20256c] backdrop-blur-3xl flex h-[60px] items-center justify-center max-[1080px]:justify-between max-[1080px]:px-[60px] max-sm:px-5 border-b-[1px] border-[#f973161a] z-[60]">
+    <div routerLink="/acceuil">
         <img ngSrc="logoBabs.png" alt="logo" width="40" height="40" class="cursor-pointer" priority="high">
     </div>
     <div class="flex text-white font-bold text-sm gap-[30px] ml-[390px] mr-[390px] max-[1080px]:hidden">
@@ -8,9 +8,14 @@
           class="cursor-pointer hover:text-orange-500 duration-200 overflow-hidden"
           (mouseenter)="revealApropos()"
           (mouseleave)="hideApropos()"
+          routerLink="/apropos"
+          [class.text-orange-500]="nav =='apropos'"
         >
             A propos
-            <div class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"></div>
+            <div 
+              class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"
+              [class.translate-x-0]="nav =='apropos'"
+            ></div>
         </div>
         <div 
           id="projets" 

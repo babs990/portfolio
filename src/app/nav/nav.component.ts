@@ -1,27 +1,33 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, Input, input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage,RouterLink],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
 
   element : any
+  @Input() nav= ''
 
   constructor(el: ElementRef){
     this.element = el
   }
 
   revealApropos(){
-    this.element.nativeElement.querySelector('#apropos').querySelector('.item').classList.remove('translate-x-[60px]')
+    if(this.element.nativeElement.querySelector('#apropos').querySelector('.item').classList.contains('translate-x-[60px]')){
+      this.element.nativeElement.querySelector('#apropos').querySelector('.item').classList.remove('translate-x-[60px]')
+    }
   }
 
   hideApropos(){
-    this.element.nativeElement.querySelector('#apropos').querySelector('.item').classList.add('translate-x-[60px]')
+    if(!this.element.nativeElement.querySelector('#apropos').querySelector('.item').classList.contains('translate-x-[60px]')){
+      this.element.nativeElement.querySelector('#apropos').querySelector('.item').classList.add('translate-x-[60px]')
+    }
   }
 
   revealProjets(){

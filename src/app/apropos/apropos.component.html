@@ -1,1 +1,95 @@
-<p>apropos works!</p>
+<div class="bg-[#1D2025] overflow-hidden">
+    <app-nav [nav]="'apropos'"></app-nav>
+
+    <!-- header -->
+    <div class="flex justify-center gap-2 w-full max-[1080px]:grid">
+        <!-- header gauche -->
+        <div  class="pt-28 gauche pr-20 max-[1080px]:mx-auto max-[1080px]:pr-0 max-sm:pt-14 max-sm:w-[244px]">
+            <img id="img" ngSrc="imageBabs2.png" alt="image" width="434" height="434" priority="high">
+        </div>
+
+        <!-- header droit -->
+        <div id="text" class="text-white w-[510px] pt-20 ml-6 pb-5 max-[1080px]:w-auto max-[1080px]:px-5 max-sm:pt-10 max-sm:px-4">
+            <div class="font-bold text-5xl leading-tight max-sm:text-2xl">
+                Serigne khalifa Ababacar Sy Nguirane
+            </div>
+            <div class="text-xl font-light mt-5 mb-8 max-sm:text-sm">
+                Actuellement étudiant en licence 3 en mathématiques appliqués informatique à l’Université Numérique Cheikh Hamidou Kane, je suis passionné par la création d’interfaces web modernes.<br><br>En tant développeur front-end et UI designer, je travail sur pas mal de projets personnels et open source. Je partage régulièrement mes avancés sur ces projets à travers mes réseaux.<br><br>Je suis toujours à la recherche de nouvelles opportunités pour continuer ma progression et enrichir mon expérience.  
+            </div>
+            <a href="cv.pdf">
+                <div 
+                  class=" w-[220px] mx-auto pt-2 h-[50px] text-2xl text-[#1D2025] font-semibold bg-orange-500 rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm max-sm:pt-1 cursor-pointer hover:scale-[105%] duration-500 animate-bounce z-20"
+                >
+                  mon cv
+                </div>
+            </a>
+
+          <!-- blur -->
+          <img ngSrc="blur.svg" alt="background" width="226" height="116" class="absolute top-[150px] left-auto right-auto max-[1080px]:left-0 max-[1080px]:right-0 max-[1080px]:top-[100px] max-[1080px]:mx-auto max-sm:top-[50px] max-sm: z-0" priority="high">
+        </div>
+
+    </div>
+    <div class="trait w-full h-[1px]"></div>
+
+    <!-- Contact -->
+    <div id="contact" class="text-white mt-52 font-bold text-6xl max-sm:text-3xl max-sm:mt-20">
+        <div class="text-center">
+            Contactez moi
+        </div>
+        <div class="flex mt-20 justify-center gap-10 animate-bounce max-sm:gap-6 max-sm:mt-14">
+            <a href="" class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]">
+                <img ngSrc="whats-app.svg" alt="whatsapp" width="94" height="94">
+            </a>
+            <a href="" class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]">
+                <img ngSrc="instagram.svg" alt="instagram" width="94" height="94">
+            </a>
+            <a href="" class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]">
+                <img ngSrc="LinkedIn.svg" alt="linkedIn" width="94" height="94">
+            </a>
+        </div>
+    </div>
+
+    <!-- Histoire -->
+    <div class="mt-32 w-full text-white max-sm:mt-24">
+        <div class="w-[333px] mx-auto max-sm:w-[177px] img">
+            <img ngSrc="imageBabs3.png" alt="image" width="333" height="333">
+        </div>
+        <div class="text-5xl font-bold text-center mt-12 max-sm:text-2xl max-sm:mt-6">
+            Mon histoire
+        </div>
+        <div class="text-base font-light w-[1015px] mx-auto mt-12 leading-relaxed max-[1080px]:w-auto max-[1080px]:px-10 max-sm:text-sm max-sm:mt-6 histoire">
+            Après mon baccalauréat en série scientifique, on m'a orienté dans une université publique ( UNCHK ) dans la filière mathématiques et informatique. Fraîchement diplômés et avec peu de connaissances dans le domaine du numérique, les premières années ont été très difficiles. A ce stade précis de ma carrière deux questions étroitement liées me tourmentaient: Sur quelle domaine je devais me spécialiser dans l'informatique ainsi que quel était le but précis de ma carrière?<br><br>Un événement anodin m'a permis de répondre à ces questions. Etant membre dans une association familiale, j'ai été chargé de confectionner le design de la carte de visite de l'association. Après avoir terminé la conception j'ai reçu énormément de compliments pour mon travail. Ensuite je me suis creusé dans la recherche sur le design jusqu'à atterrir sur le web design. C'est ainsi que j'ai compris que ma réelle passion réside dans la conception et le développement d'interfaces web attractives, intuitives et modernes.<br><br>Depuis lors je travaille d'arrache pieds pour booster mes connaissances et compétences dans ce domaine si passionnant. Aujourd'hui je suis plus que jamais déterminé à montrer ma valeur et réaliser mon rêve qui est de devenir un lead développeur front et un UI designer senior.
+        </div>
+    </div>
+
+    <!-- Outils et technos -->
+    <div class="text-white mt-56 pb-24 max-sm:mt-24 outils max-sm:pb-12">
+        <div class=" font-bold text-5xl text-center max-sm:text-2xl">
+            Outils et technologies
+        </div>
+        <div class="w-[748px] text-xl font-normal mx-auto mt-7 max-[970px]:w-[620px] max-sm:text-sm max-sm:w-[296px] max-sm:mt-6">
+            A travers mes projets j’ai eu à explorer pas mal de technologies et d’outils. Voici les outils avec lequel je travail le plus et dont j’ai une certaine expertise.
+        </div>
+        <div class="max-[970px]:w-[700px] max-[720px]:w-[286px] rounded-[48px] w-[896px] bg-[#1D2025] shadow-ombre1 border-[1px] border-[#f9731647] border-dashed mx-auto mt-10 max-sm:mt-6">
+            <div class="pt-10 flex justify-center gap-16 max-[720px]:gap-3">
+                <img ngSrc="html.png" alt="html" width="121" height="121" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
+                <img ngSrc="css.png" alt="css" width="86" height="121" class="max-[720px]:w-[28px] max-[720px]:h-[40px]">
+                <img ngSrc="javascript.png" alt="js" width="112" height="112" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
+                <img ngSrc="angular.png" alt="angular" width="107" height="121" class="max-[720px]:w-[39px] max-[720px]:h-[40px]">
+            </div>
+            <div class="flex pt-10 justify-center gap-10 items-center max-[720px]:gap-3">
+                <img ngSrc="typescript.png" alt="typescript" width="110" height="111" class="max-[720px]:w-[40px] max-[720px]:h-[41px]">
+                <img ngSrc="tailwind.png" alt="tailwind" width="173" height="43" class="max-[720px]:w-[80px] max-[720px]:h-[20px]">
+                <img ngSrc="visual.png" alt="visual" width="80" height="80" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
+            </div>
+            <div class="flex pt-10 justify-center gap-10 items-center pb-10 max-[720px]:gap-3 ">
+                <img ngSrc="illustrator.png" alt="illustrator" width="98" height="96" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
+                <img ngSrc="figma.png" alt="figma" width="67" height="102" class="max-[720px]:w-[26.27px] max-[720px]:h-[40px]">
+                <img ngSrc="indesign.png" alt="indesign" width="88" height="86" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
+            </div>
+
+        </div>
+    </div>
+    
+    <app-footer></app-footer>
+</div>

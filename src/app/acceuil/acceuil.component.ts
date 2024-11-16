@@ -1,20 +1,22 @@
-import { AfterViewInit, Component, signal } from '@angular/core';
+import { AfterViewInit, Component, inject, signal } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
 import { NgOptimizedImage } from '@angular/common';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projets } from '../projet';
 import { FooterComponent } from '../footer/footer.component';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-acceuil',
   standalone: true,
-  imports: [NavComponent,NgOptimizedImage,FooterComponent],
+  imports: [NavComponent,NgOptimizedImage,FooterComponent,RouterLink],
   templateUrl: './acceuil.component.html',
   styleUrl: './acceuil.component.css'
 })
 export class AcceuilComponent implements AfterViewInit{
 
+  readonly router = inject(Router)
   readonly projets = signal(projets)
   
   ngAfterViewInit(): void {
@@ -90,5 +92,13 @@ export class AcceuilComponent implements AfterViewInit{
       }
     })
 
+  }
+
+  contact(){
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
   }
 }

@@ -1,6 +1,6 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component, ElementRef, EventEmitter, Input, input, OnInit, Output } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, ElementRef, EventEmitter, inject, Input, input, OnInit, Output } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -12,6 +12,7 @@ import { RouterLink } from '@angular/router';
 export class NavComponent {
 
   element : any
+  router = inject(Router)
   // src = localStorage.getItem('src')
 
   @Input() nav= ''
@@ -33,6 +34,10 @@ export class NavComponent {
 
   constructor(el: ElementRef){
     this.element = el
+  }
+
+  apropos(){
+    this.router.navigateByUrl('/apropos')
   }
 
   revealApropos(){

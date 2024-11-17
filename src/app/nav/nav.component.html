@@ -8,7 +8,7 @@
           class="cursor-pointer hover:text-orange-500 duration-200 overflow-hidden"
           (mouseenter)="revealApropos()"
           (mouseleave)="hideApropos()"
-          routerLink="/apropos"
+          (click)="apropos()"          
           [class.text-orange-500]="nav =='apropos'"
         >
             A propos

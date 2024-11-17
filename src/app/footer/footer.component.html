@@ -2,12 +2,15 @@
 
     <div class="flex items-center gap-5 max-sm:grid max-sm:place-items-center">
         <div class="flex gap-5 max-sm:">
-            <img ngSrc="logoBabs.png" alt="logo" width="40" height="40" class="cursor-pointer" priority="high">
+            <img ngSrc="logoBabs.png" alt="logo" width="40" height="40" class="cursor-pointer" priority="high" routerLink="/acceuil">
             <img ngSrc="nocturne.svg" alt="icon" width="30" height="30" class="cursor-pointer">
         </div>
 
         <div class="flex gap-5">
-            <div class="cursor-pointer hover:text-orange-500 duration-200 overflow-hidden">
+            <div 
+              class="cursor-pointer hover:text-orange-500 duration-200 overflow-hidden"
+              routerLink="/apropos"
+            >
                 A propos
               </div>
               <div class="cursor-pointer hover:text-orange-500 duration-200 overflow-hidden">

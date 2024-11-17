@@ -18,6 +18,11 @@ export class AcceuilComponent implements AfterViewInit{
 
   readonly router = inject(Router)
   readonly projets = signal(projets)
+  mode = signal('')
+
+  modeDark(val : string){
+    this.mode.set(val)
+  }
   
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);

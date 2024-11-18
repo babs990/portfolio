@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, inject, signal } from '@angular/core';
+import { AfterViewInit, Component, computed, inject, signal } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
 import { NgOptimizedImage } from '@angular/common';
 import gsap from 'gsap';
@@ -18,6 +18,9 @@ export class AcceuilComponent implements AfterViewInit{
 
   readonly router = inject(Router)
   readonly projets = signal(projets)
+  projets3 = computed(()=>{
+    return this.projets().filter((item) => item.numb <=3)
+  }) 
   mode = signal('')
 
   modeDark(val : string){

@@ -23,9 +23,15 @@
           class="cursor-pointer hover:text-orange-500 duration-200 overflow-hidden"
           (mouseenter)="revealProjets()"
           (mouseleave)="hideProjets()"
+          routerLink="/projets"
+          [class.text-orange-500]="nav =='projets'"
         >
             Projets
-            <div class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"></div>
+            <div 
+              class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"
+              [class.translate-x-0]="nav =='projets'"
+              [class.translate-x-[60px]]="nav !='projets'"
+            ></div>
         </div>
         <div 
           id="articles" 

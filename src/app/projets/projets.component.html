@@ -1,0 +1,46 @@
+<div class="bg-[#1D2025] text-white">
+    <app-nav [nav]="'projets'"></app-nav>
+
+    <div class="text-6xl font-bold mt-32 text-center max-sm:text-4xl max-sm:mt-20 projets">
+        Projets
+    </div>
+    <div class="text-2xl mt-9 font-extralight w-[725px] mx-auto max-sm:w-full max-sm:px-10 max-sm:text-base description overflow-hidden">
+        Voici les projets personnels sur lesquels je travail actuellement ainsi que certains qui sont opérationnels
+    </div>
+    <div class="grid-cols-[345px_345px_345px] gap-x-5 grid justify-center mt-20 gap-y-20 max-[1140px]:grid-cols-[345px] max-[1140px]:gap-11 max-sm:grid-cols-[296px] max-sm:mt-10 overflow-hidden">
+        @for (item of projets(); track item) {
+            <div [id]="item.nom" class="w-[345px] max-sm:w-[296px] carteProjets">
+                <!-- image -->
+                <div class="w-full rounded-full h-[345px] border-[1px] border-orange-500 border-dashed p-[6px] max-sm:w-[189px] max-sm:h-[189px] max-sm:p-[6px] max-sm:mx-auto">
+                    <img 
+                      [ngSrc]="item.img" 
+                      [alt]="item.nom" 
+                      width="331" 
+                      height="331" 
+                      class="hover:scale-[103%] duration-700 max-sm:w-[175px] max-sm:h-[175px]"
+                    >
+                </div>
+
+                <!-- titre et description -->
+                <div class="w-full border-[1px] border-[#f9731647] mt-4 py-6 pl-12 rounded-[43px] bg-[#1D2025] hover:shadow-ombre1 duration-700 max-sm:mt-3 max-sm:pl-9">
+                    <div class="text-3xl font-medium max-sm:text-xl">
+                        {{item.nom}}
+                    </div>
+                    <div class="text-base font-light my-5 w-[231px] max-sm:text-xs">
+                        {{item.description}}
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <a [href]="item.lien">
+                            <img ngSrc="link.svg" alt="link" width="34" height="17" class="cursor-pointer">
+                        </a>
+                        <a [href]="item.lien" class="text-sm font-semibold cursor-pointer hover:text-cyan-800 duration-500">
+                            {{item.lien}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <app-footer></app-footer>
+</div>

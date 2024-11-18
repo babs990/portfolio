@@ -13,23 +13,7 @@ export class NavComponent {
 
   element : any
   router = inject(Router)
-  // src = localStorage.getItem('src')
-
   @Input() nav= ''
-  // @Output() modeChange: EventEmitter<string> = new EventEmitter();
-  
-  // darkMode(){
-  //   if(this.element.nativeElement.querySelector('#mode').querySelector('img').getAttribute('src') == 'nocturne.svg'){
-  //     this.src = 'sun.svg'
-  //     localStorage.setItem('src','nocturne.svg')
-  //     this.modeChange.emit('clair')
-  //   }
-  //   else{
-  //     this.modeChange.emit('nocturne')
-  //     this.src = 'nocturne.svg'
-  //     localStorage.setItem('src','sun.svg')
-  //   }
-  // }
 
 
   constructor(el: ElementRef){
@@ -47,7 +31,7 @@ export class NavComponent {
   }
 
   hideApropos(){
-    if(this.element.nativeElement.querySelector('#apropos').querySelector('.item').classList.contains('translate-x-[60px]')){
+    if(!this.element.nativeElement.querySelector('#apropos').querySelector('.item').classList.contains('translate-x-[60px]')){
       this.element.nativeElement.querySelector('#apropos').querySelector('.item').classList.add('translate-x-[60px]')
     }
   }

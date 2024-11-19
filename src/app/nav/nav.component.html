@@ -39,9 +39,14 @@
           (mouseenter)="revealArticles()"
           (mouseleave)="hideArticles()"
           routerLink="/articles"
+          [class.text-orange-500]="nav =='articles'"
         >
             Articles
-            <div class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"></div>
+            <div 
+              class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"
+              [class.translate-x-0]="nav =='articles'"
+              [class.translate-x-[60px]]="nav !='articles'"
+            ></div>
         </div>
     </div>
     <div id="mode" class="max-[1080px]:hidden">

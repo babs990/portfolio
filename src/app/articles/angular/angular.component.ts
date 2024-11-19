@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { NavComponent } from '../../nav/nav.component';
 import { NgOptimizedImage } from '@angular/common';
 import { FooterComponent } from '../../footer/footer.component';
@@ -11,5 +11,12 @@ import { FooterComponent } from '../../footer/footer.component';
   styleUrl: './angular.component.css'
 })
 export class AngularComponent {
+
+  src = localStorage.getItem('src') || ''
+  mode = signal(localStorage.getItem('mode') || 'nuit')
+  
+  modeDark(val :string){
+    this.mode.set(val)
+  }
 
 }

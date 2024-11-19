@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, signal } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
 import { NgOptimizedImage } from '@angular/common';
 import gsap from 'gsap';
@@ -14,6 +14,13 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './apropos.component.css'
 })
 export class AproposComponent implements AfterViewInit{
+
+  src = localStorage.getItem('src') || ''
+  mode = signal(localStorage.getItem('mode') || 'nuit')
+  
+  modeDark(val :string){
+    this.mode.set(val)
+  }
 
   ngAfterViewInit(): void {
     gsap.registerPlugin(ScrollTrigger);

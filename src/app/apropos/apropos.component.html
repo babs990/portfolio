@@ -1,19 +1,26 @@
-<div class="bg-[#1D2025]">
-    <app-nav [nav]="'apropos'"></app-nav>
+<div class="bg-[#1D2025] duration-150 " [class.bg-[#d4d4d4]]="mode() == 'claire'">
+    <app-nav [nav]="'apropos'" [src]="src" (mode)="modeDark($event)"></app-nav>
 
     <!-- header -->
     <div class="flex justify-center gap-2 w-full max-[1080px]:grid overflow-hidden">
         <!-- header gauche -->
-        <div  class="pt-28 gauche pr-20 max-[1080px]:mx-auto max-[1080px]:pr-0 max-sm:pt-14 max-sm:w-[244px]">
+        <div  
+          class="pt-28 gauche pr-20 max-[1080px]:mx-auto max-[1080px]:pr-0 max-sm:pt-14 max-sm:w-[244px] duration-150"
+          [class.gaucheLight]="mode() == 'claire'"
+        >
             <img id="img" ngSrc="imageBabs2.png" alt="image" width="434" height="434" priority="high" class="max-sm:w-[244px] max-sm:h-[244px]">
         </div>
 
         <!-- header droit -->
-        <div id="text" class="text-white w-[510px] pt-20 ml-6 pb-5 max-[1080px]:ml-0 max-[1080px]:w-full max-[1080px]:px-5 max-sm:pt-10 max-sm:px-4">
-            <div class="font-bold text-5xl leading-tight max-sm:text-2xl">
+        <div 
+          id="text" 
+          class="text-white duration-150 w-[510px] pt-20 ml-6 pb-5 max-[1080px]:ml-0 max-[1080px]:w-full max-[1080px]:px-5 max-sm:pt-10 max-sm:px-4"
+          [class.text-black]="mode() == 'claire'"
+        >
+            <div class="font-bold text-5xl leading-tight max-sm:text-2xl" [class.text-black]="mode() == 'claire'">
                 Serigne khalifa Ababacar Sy Nguirane
             </div>
-            <div class="text-xl font-light mt-5 mb-8 max-sm:text-sm">
+            <div class="text-xl font-light mt-5 mb-8 max-sm:text-sm" [class.text-black]="mode() == 'claire'">
                 Actuellement étudiant en mathématiques appliqués et informatique à l’Université Numérique Cheikh Hamidou Kane, je suis passionné par la création d’interfaces web modernes.<br><br>En tant développeur front-end et UI designer, je travail sur pas mal de projets personnels et open source. Je partage régulièrement mes avancées sur ces projets à travers mes réseaux.<br><br>Je suis toujours à la recherche de nouvelles opportunités pour continuer ma progression et enrichir mon expérience.  
             </div>
             <a href="cv.pdf">
@@ -29,11 +36,11 @@
         </div>
 
     </div>
-    <div class="trait w-full h-[1px]"></div>
+    <div class="trait w-full h-[1px] duration-150" [class.traitLight]="mode() == 'claire'"></div>
 
     <!-- Contact -->
-    <div id="contact" class="text-white mt-52 font-bold text-6xl max-sm:text-3xl max-sm:mt-20">
-        <div class="text-center">
+    <div id="contact" class="text-white mt-52 font-bold text-6xl max-sm:text-3xl max-sm:mt-20" >
+        <div class="text-center" [class.text-black]="mode() == 'claire'">
             Contactez moi
         </div>
         <div class="flex mt-20 justify-center gap-10 animate-bounce max-sm:gap-6 max-sm:mt-14">
@@ -53,24 +60,27 @@
     </div>
 
     <!-- Histoire -->
-    <div class="mt-32 w-full text-white max-sm:mt-24">
+    <div class="mt-32 w-full text-white max-sm:mt-24" >
         <div class="w-[333px] mx-auto max-sm:w-[177px] img">
             <img ngSrc="imageBabs3.png" alt="image" width="333" height="333">
         </div>
-        <div class="text-5xl font-bold text-center mt-12 max-sm:text-2xl max-sm:mt-6">
+        <div class="text-5xl font-bold text-center mt-12 max-sm:text-2xl max-sm:mt-6" [class.text-black]="mode() == 'claire'">
             Mon histoire
         </div>
-        <div class="text-base font-light w-[1015px] mx-auto mt-12 leading-relaxed max-[1080px]:w-auto max-[1080px]:px-10 max-sm:text-sm max-sm:mt-6 histoire">
+        <div 
+          class="text-base font-light w-[1015px] mx-auto mt-12 leading-relaxed max-[1080px]:w-auto max-[1080px]:px-10 max-sm:text-sm max-sm:mt-6 histoire"
+          [class.text-black]="mode() == 'claire'"
+        >
             Après mon baccalauréat en série scientifique, on m'a orienté dans une université publique ( UNCHK ) dans la filière mathématiques et informatique. Fraîchement diplômés et avec peu de connaissances dans le domaine du numérique, les premières années ont été très difficiles. A ce stade précis de ma carrière deux questions étroitement liées me tourmentaient: Sur quel domaine je devais me spécialiser dans l'informatique ainsi que quel était le but précis de ma carrière?<br><br>Un événement anodin m'a permis de répondre à ces questions. Etant membre dans une association familiale, j'ai été chargé de confectionner le design de la carte de visite de l'association. Après avoir terminé la conception j'ai reçu énormément de compliments pour mon travail. Ensuite je me suis creusé dans la recherche sur le design jusqu'à atterrir sur le web design. C'est ainsi que j'ai compris que ma réelle passion réside dans la conception et le développement d'interfaces web attractives, intuitives et modernes.<br><br>Depuis lors je travaille d'arrache pieds pour booster mes connaissances et compétences dans ce domaine si passionnant. Aujourd'hui je suis plus que jamais déterminé à montrer ma valeur et réaliser mon rêve qui est de devenir un lead développeur front et un UI designer senior.
         </div>
     </div>
 
     <!-- Outils et technos -->
-    <div class="text-white mt-56 pb-24 max-sm:mt-24 outils max-sm:pb-12">
-        <div class=" font-bold text-5xl text-center max-sm:text-2xl">
+    <div class="text-white mt-56 pb-24 max-sm:mt-24 outils max-sm:pb-12" >
+        <div class=" font-bold text-5xl text-center max-sm:text-2xl" [class.text-black]="mode() == 'claire'">
             Outils et technologies
         </div>
-        <div class="w-[748px] text-xl font-normal mx-auto mt-7 max-[970px]:w-[620px] max-sm:text-sm max-sm:w-[296px] max-sm:mt-6">
+        <div class="w-[748px] text-xl font-normal mx-auto mt-7 max-[970px]:w-[620px] max-sm:text-sm max-sm:w-[296px] max-sm:mt-6" [class.text-black]="mode() == 'claire'">
             A travers mes projets j’ai eu à explorer pas mal de technologies et d’outils. Voici les outils avec lesquel je travail le plus et dont j’ai une certaine expertise.
         </div>
         <div class="max-[970px]:w-[700px] max-[720px]:w-[286px] rounded-[48px] w-[896px] bg-[#1D2025] shadow-ombre1 border-[1px] border-[#f9731647] border-dashed mx-auto mt-10 max-sm:mt-6">

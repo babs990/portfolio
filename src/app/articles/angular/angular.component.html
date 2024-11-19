@@ -1,5 +1,9 @@
-<div class="bg-[#1D2025] text-white">
-    <app-nav [nav]="'articles'"></app-nav>
+<div 
+  class="bg-[#1D2025] duration-150 " 
+  [class.bg-[#d4d4d4]]="mode() == 'claire'"
+  [class.text-white]="mode() != 'claire'"
+>
+    <app-nav [nav]="'articles'" [src]="src" (mode)="modeDark($event)"></app-nav>
 
     <div class="mx-auto w-[682px] mt-20 max-[800px]:w-[290px]">
         <img ngSrc="angularArticle2.png" alt="angular" width="682" height="297">

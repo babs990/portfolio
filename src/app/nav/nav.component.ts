@@ -9,11 +9,39 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
-export class NavComponent {
+export class NavComponent implements OnInit {
 
   element : any
   router = inject(Router)
+  source:string =''
+
+  @Input() src = 'nocturne.svg'
+  @Output() mode: EventEmitter<string> = new EventEmitter()
   @Input() nav= ''
+
+  Darkmode(){
+    if(this.source == 'nocturne.svg'){
+      this.mode.emit('claire')
+      this.source = 'sun.svg'
+      localStorage.setItem('src','sun.svg')
+      localStorage.setItem('mode','claire')
+    }
+    else{
+      this.mode.emit('nuit')
+      this.source = 'nocturne.svg'
+      localStorage.setItem('src','nocturne.svg')
+      localStorage.setItem('mode','nuit')
+    }
+  }
+
+  ngOnInit(): void {
+    if(this.src == ''){
+      this.source = 'nocturne.svg'
+    }
+    else{
+      this.source = this.src
+    }
+  }
 
 
   constructor(el: ElementRef){

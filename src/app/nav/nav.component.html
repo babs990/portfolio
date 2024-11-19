@@ -1,6 +1,6 @@
 <div class="sticky top-0 bg-[#1d2025c0] backdrop-blur-3xl flex h-[60px] items-center justify-center max-[1080px]:justify-between max-[1080px]:px-[60px] max-sm:px-5 border-b-[1px] border-[#f973161a] z-[60]">
     <div routerLink="/acceuil">
-        <img ngSrc="logoBabs.png" alt="logo" width="40" height="40" class="cursor-pointer" priority="high">
+        <img ngSrc="logoBabs.png" alt="logo" width="40" height="40" class="cursor-pointer hover:animate-spin" priority="high">
     </div>
     <div class="flex text-white font-bold text-sm gap-[30px] ml-[390px] mr-[390px] max-[1080px]:hidden">
         <div 
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div id="mode" class="max-[1080px]:hidden">
-        <img src="nocturne.svg" alt="icon" width="30" height="30" class="cursor-pointer">
+        <img [src]="source" alt="icon" width="30" height="30" class="cursor-pointer hover:animate-spin" (click)="Darkmode()">
     </div>
 
     <!-- dropIcon -->
@@ -76,6 +76,6 @@
         <div class="cursor-pointer hover:text-stone-500 duration-200 overflow-hidden mt-4" routerLink="/articles">
           Articles
         </div>
-      <img ngSrc="nocturne.svg" alt="icon" width="30" height="30" class="cursor-pointer mx-auto mt-4">
+      <img [src]="source" alt="icon" width="30" height="30" class="cursor-pointer mx-auto mt-4" (click)="Darkmode()">
     </div>
 </div>

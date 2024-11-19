@@ -1,10 +1,13 @@
-<div class="bg-[#1D2025] text-white">
-    <app-nav [nav]="'projets'"></app-nav>
+<div class="bg-[#1D2025] duration-150 text-white" [class.bg-[#d4d4d4]]="mode() == 'claire'">
+    <app-nav [nav]="'projets'" [src]="src" (mode)="modeDark($event)"></app-nav>
 
-    <div class="text-6xl font-bold mt-32 text-center max-sm:text-4xl max-sm:mt-20 projets">
+    <div class="text-6xl font-bold mt-32 text-center max-sm:text-4xl max-sm:mt-20 projets" [class.text-black]="mode() == 'claire'">
         Projets
     </div>
-    <div class="text-2xl mt-9 font-extralight w-[725px] mx-auto max-sm:w-full max-sm:px-10 max-sm:text-base description overflow-hidden">
+    <div 
+      class="text-2xl mt-9 font-extralight w-[725px] mx-auto max-sm:w-full max-sm:px-10 max-sm:text-base description overflow-hidden"
+      [class.text-black]="mode() == 'claire'"
+    >
         Voici les projets personnels sur lesquels je travaille. Certains sont en cours de développement, d'autres sont totalement opérationnels
     </div>
     <div class="grid-cols-[345px_345px_345px] gap-x-5 grid justify-center mt-20 gap-y-20 max-[1140px]:grid-cols-[345px] max-[1140px]:gap-11 max-sm:grid-cols-[296px] max-sm:mt-10 overflow-hidden">

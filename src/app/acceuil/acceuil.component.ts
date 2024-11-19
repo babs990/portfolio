@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, computed, inject, signal } from '@angular/core';
+import { AfterViewInit, Component, computed, inject, OnInit, signal } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
 import { NgOptimizedImage } from '@angular/common';
 import gsap from 'gsap';
@@ -14,17 +14,22 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './acceuil.component.html',
   styleUrl: './acceuil.component.css'
 })
-export class AcceuilComponent implements AfterViewInit{
+export class AcceuilComponent implements AfterViewInit,OnInit{
 
   readonly router = inject(Router)
   readonly projets = signal(projets)
+  src = localStorage.getItem('src') || ''
+  mode = signal(localStorage.getItem('mode') || 'nuit')
   projets3 = computed(()=>{
     return this.projets().filter((item) => item.numb <=3)
   }) 
-  mode = signal('')
 
-  modeDark(val : string){
+  modeDark(val :string){
     this.mode.set(val)
+  }
+  
+  ngOnInit(): void {
+    
   }
   
   ngAfterViewInit(): void {

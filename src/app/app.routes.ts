@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { AproposComponent } from './apropos/apropos.component';
 import { ProjetsComponent } from './projets/projets.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { AngularComponent } from './articles/angular/angular.component';
 
 export const routes: Routes = [
     {
@@ -18,6 +20,22 @@ export const routes: Routes = [
         path: 'projets',
         component: ProjetsComponent,
         title: 'Projets'
+    },
+    {
+        path: 'articles',
+        children :[
+            {
+                path : '',
+                component: ArticlesComponent,
+                title: 'Articles',
+        
+            },
+            {
+                path: 'angular',
+                component: AngularComponent,
+                title: 'Angular'
+            },        
+        ]
     },
     {path : '', redirectTo : '/acceuil', pathMatch : 'full'}
 ];

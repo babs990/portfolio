@@ -38,6 +38,7 @@
           class="cursor-pointer hover:text-orange-500 duration-200 overflow-hidden"
           (mouseenter)="revealArticles()"
           (mouseleave)="hideArticles()"
+          routerLink="/articles"
         >
             Articles
             <div class="item w-full h-[1px] bg-orange-500 mt-1 translate-x-[60px] duration-500 rounded-full"></div>
@@ -67,7 +68,7 @@
         <div class="cursor-pointer hover:text-stone-500 duration-200 overflow-hidden mt-4" routerLink="/projets">
           Projets
         </div>
-        <div class="cursor-pointer hover:text-stone-500 duration-200 overflow-hidden mt-4">
+        <div class="cursor-pointer hover:text-stone-500 duration-200 overflow-hidden mt-4" routerLink="/articles">
           Articles
         </div>
       <img ngSrc="nocturne.svg" alt="icon" width="30" height="30" class="cursor-pointer mx-auto mt-4">

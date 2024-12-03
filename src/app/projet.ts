@@ -17,7 +17,7 @@ export const projets = [
         numb: 3,
         nom: 'B-WATCH',
         description : 'B-WATCH est une application destinée à la vente de montre. ',
-        lien : 'https/bwatch.app',
+        lien : 'https://b-watch-sigma.vercel.app/',
         img: 'bwatch.png'
     },
     {

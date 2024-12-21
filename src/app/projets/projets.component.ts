@@ -92,7 +92,7 @@ export class ProjetsComponent implements AfterViewInit {
      duration : 2,
      delay: 0.3,
      scrollTrigger:{
-       trigger :'#Pokedex',
+       trigger :'#MTN',
        start :'top 75%',
      }
    })

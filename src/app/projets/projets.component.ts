@@ -86,7 +86,7 @@ export class ProjetsComponent implements AfterViewInit {
      }
    })
  
-   gsap.from('#Pokedex', {
+   gsap.from('#MTN', {
      translateY : 50,
      opacity :0,
      duration : 2,

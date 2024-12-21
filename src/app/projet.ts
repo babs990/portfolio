@@ -29,10 +29,10 @@ export const projets = [
     },
     {
         numb: 5,
-        nom: 'Pokedex',
-        description : 'application pour la gestion de carte Pokémon',
-        lien : 'https/pokedex.app',
-        img: 'pikachu.png'
+        nom: 'MTN',
+        description : 'site web pour l\'entreprise MTN-GROUP IS',
+        lien : 'https://mtn-app-phi.vercel.app/',
+        img: 'mtn.png'
     },
 
 ]

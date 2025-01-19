@@ -20,6 +20,8 @@ export class AcceuilComponent implements AfterViewInit,OnInit{
   readonly projets = signal(projets)
   src = localStorage.getItem('src') || ''
   mode = signal(localStorage.getItem('mode') || 'nuit')
+  skill = signal(localStorage.getItem('skill'))
+
   projets3 = computed(()=>{
     return this.projets().filter((item) => item.numb <=3)
   }) 
@@ -104,7 +106,6 @@ export class AcceuilComponent implements AfterViewInit,OnInit{
         start : 'top 95%',
       }
     })
-
   }
 
   contact(){

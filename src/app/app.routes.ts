@@ -4,6 +4,7 @@ import { AproposComponent } from './apropos/apropos.component';
 import { ProjetsComponent } from './projets/projets.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { AngularComponent } from './articles/angular/angular.component';
+import { ChoiceComponent } from './choice/choice.component';
 
 export const routes: Routes = [
     {
@@ -11,6 +12,13 @@ export const routes: Routes = [
         component: AcceuilComponent,
         title: 'Acceuil'
     },
+
+    {
+        path: 'choice',
+        component: ChoiceComponent,
+        title: 'Acceuil'
+    },
+
     {
         path: 'apropos',
         component: AproposComponent,
@@ -37,5 +45,5 @@ export const routes: Routes = [
             },        
         ]
     },
-    {path : '', redirectTo : '/acceuil', pathMatch : 'full'}
+    {path : '', redirectTo : '/choice', pathMatch : 'full'}
 ];

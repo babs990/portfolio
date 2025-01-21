@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projets } from '../projet';
 import { FooterComponent } from '../footer/footer.component';
 import { Router, RouterLink } from '@angular/router';
+import { outils } from '../projet';
 
 @Component({
   selector: 'app-acceuil',
@@ -21,6 +22,14 @@ export class AcceuilComponent implements AfterViewInit,OnInit{
   src = localStorage.getItem('src') || ''
   mode = signal(localStorage.getItem('mode') || 'nuit')
   skill = signal(localStorage.getItem('skill'))
+  outils = signal(outils)
+  techno = computed(()=>{
+    return this.outils().filter((item)=> item.type == 'techno')
+  })
+  methode = computed(()=>{
+    return this.outils().filter((item)=> item.type == 'ux')
+  })
+
 
   projets3 = computed(()=>{
     return this.projets().filter((item) => item.numb <=3)

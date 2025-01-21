@@ -34,5 +34,53 @@ export const projets = [
         lien : 'https://mtn-app-phi.vercel.app/',
         img: 'mtn.png'
     },
+]
+
+export const outils = [
+    {
+        id : 1,
+        title : 'Figma',
+        type : 'techno'
+    },
+    {
+        id : 2,
+        title : 'Illustrator',
+        type : 'techno'
+    },
+    {
+        id : 3,
+        title : 'Photoshop',
+        type : 'techno'
+    },
+    {
+        id : 4,
+        title : 'InDesign',
+        type : 'techno'
+    },
+    {
+        id : 5,
+        title : 'Design thinking',
+        type : 'ux'
+    },
+    {
+        id : 6,
+        title : 'Design Sprint',
+        type : 'ux'
+    },
+    {
+        id : 7,
+        title : 'Persona',
+        type : 'ux'
+    },
+    {
+        id : 8,
+        title : 'User flow',
+        type : 'ux'
+    },
+    {
+        id : 9,
+        title : 'Wireframe',
+        type : 'ux'
+    },
 
 ]

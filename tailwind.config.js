@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-       ombre1 : '0px 0px 50px rgba(0, 0, 0, 0.25)'     
+       ombre1 : '0px 0px 50px rgba(0, 0, 0, 0.25)',
+       ombre2 : '10px 10px 30px rgba(249, 115, 22, 0.05)'
       },
       keyframes :{
         fadeUp : {
@@ -37,4 +38,3 @@ module.exports = {
   },
   plugins: [],
 }
-

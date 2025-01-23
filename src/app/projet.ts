@@ -84,3 +84,22 @@ export const outils = [
     },
 
 ]
+
+export const projetsUi = [
+    {
+        numb: 1,
+        nom: 'Les recettes de Adja',
+        description : 'Design UI d’une application mobile destinée a la vente de nourriture en ligne.',
+        dribbble : 'https://dribbble.com/shots/25495572-Les-recettes-de-Adja-mobile-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share',
+        behance : 'https://www.behance.net/gallery/216967077/Les-recettes-de-Adja',
+        img: 'Adja.png'
+    },
+    {
+        numb: 2,
+        nom: 'B-WATCH',
+        description : 'Design UI d’une application web destinée a la vente de montre en ligne.',
+        dribbble : 'https://dribbble.com/shots/25495572-Les-recettes-de-Adja-mobile-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share',
+        behance : 'https://www.behance.net/gallery/209257233/B-WATCH-project',
+        img: 'bwatch2.png'
+    },
+]

@@ -1,9 +1,10 @@
-import { AfterViewInit, Component, signal } from '@angular/core';
+import { AfterViewInit, Component, computed, signal } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
 import { NgOptimizedImage } from '@angular/common';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FooterComponent } from '../footer/footer.component';
+import { outils } from '../projet';
 
 
 @Component({
@@ -17,7 +18,14 @@ export class AproposComponent implements AfterViewInit{
 
   src = localStorage.getItem('src') || ''
   mode = signal(localStorage.getItem('mode') || 'nuit')
-  
+  outils = signal(outils)
+  techno = computed(()=>{
+    return this.outils().filter((item)=> item.type == 'techno')
+  })
+  methode = computed(()=>{
+    return this.outils().filter((item)=> item.type == 'ux')
+  })
+
   modeDark(val :string){
     this.mode.set(val)
   }

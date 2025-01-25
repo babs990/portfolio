@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, computed, Signal, signal } from '@angular/core';
+import { AfterViewInit, Component, computed, ElementRef, Signal, signal } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
-import { projets } from '../projet';
+import { projets, projetsUi, projetUx } from '../projet';
 import { NgOptimizedImage } from '@angular/common';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -17,12 +17,27 @@ import { FooterComponent } from '../footer/footer.component';
 export class ProjetsComponent implements AfterViewInit {
 
   readonly projets = signal(projets)
-
+  readonly User = signal(projetsUi)
+  element : any
   src = localStorage.getItem('src') || ''
   mode = signal(localStorage.getItem('mode') || 'nuit')
   
   modeDark(val :string){
     this.mode.set(val)
+  }
+
+  constructor(el:ElementRef){
+    this.element = el
+  }
+
+  basculerUX(){
+    this.element.nativeElement.querySelector('#fond').classList.add('translate-x-full')
+    this.User.set(projetUx)
+  }
+
+  basculerUI(){
+    this.element.nativeElement.querySelector('#fond').classList.remove('translate-x-full')
+    this.User.set(projetsUi)
   }
 
   

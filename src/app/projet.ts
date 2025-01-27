@@ -104,4 +104,18 @@ export const projetsUi = [
     },
 ]
 
-export const projetUx = []
+export const projetUx = [
+    {
+        numb: 1,
+        nom: 'SenGame app',
+        fichier : '',
+        img: 'sengame.png'
+    },
+    {
+        numb: 1,
+        nom: 'SenGame app',
+        fichier : '',
+        img: 'sengame.png'
+    },
+
+]

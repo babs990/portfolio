@@ -111,7 +111,7 @@ export const projetUx = [
         numb: 1,
         idName : 'sengame',
         nom: 'SenGame app',
-        fichier : '',
+        fichier : 'sengame.pdf',
         img: 'sengame.png'
     },
 ]

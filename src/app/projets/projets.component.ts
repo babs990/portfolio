@@ -16,6 +16,7 @@ import { FooterComponent } from '../footer/footer.component';
 })
 export class ProjetsComponent implements AfterViewInit {
 
+  skill = signal(localStorage.getItem('skill'))
   readonly projets = signal(projets)
   readonly projetsUi = signal(projetsUi)
   readonly projetsUx = signal(projetUx)

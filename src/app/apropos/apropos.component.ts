@@ -18,6 +18,7 @@ export class AproposComponent implements AfterViewInit{
 
   src = localStorage.getItem('src') || ''
   mode = signal(localStorage.getItem('mode') || 'nuit')
+  skill = signal(localStorage.getItem('skill'))
   outils = signal(outils)
   techno = computed(()=>{
     return this.outils().filter((item)=> item.type == 'techno')

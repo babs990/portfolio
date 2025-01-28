@@ -5,13 +5,13 @@
         Projets
     </div>
     <div 
-      class="text-2xl mt-9 font-extralight w-[725px] mx-auto max-sm:w-full max-sm:px-10 max-sm:text-base description overflow-hidden"
+      class="text-2xl mt-9 font-extralight w-[725px] mx-auto max-[760px]:w-full max-[760px]:px-10 max-sm:text-base description overflow-hidden"
       [class.text-black]="mode() == 'claire'"
     >
         Voici les projets personnels sur lesquels je travaille. Certains sont en cours de développement, d'autres sont totalement opérationnels
     </div>
 
-    <div class="w-[124px] h-[40px] border-[1px] border-orange-500 rounded-full mt-10 mx-auto flex">
+    <div id="basculer" class="w-[124px] h-[40px] border-[1px] border-orange-500 rounded-full mt-10 mx-auto flex">
         <div id="fond" class="w-[62px] h-[40px] bg-orange-500 rounded-full absolute z-0 duration-200">
         </div>
         <div 
@@ -34,7 +34,7 @@
     <div class="grid grid-cols-[408px_408px] gap-20 mt-12 justify-center max-[970px]:grid-cols-[408px] max-sm:w-[304px] max-sm:gap-8 max-sm:mt-6 max-sm:mx-auto">
         @for (item of User(); track item.numb) {
             @if (User() == projetsUi()) {
-                <div class="carteProjets mt-6 pt-[9px] w-[408px] h-[474px] bg-[#ffffff10] rounded-[42px] mx-auto backdrop-blur-3xl hover:shadow-ombre2 duration-500 max-sm:w-[304px] max-sm:h-[365px] max-sm:rounded-[46px] max-sm:pt-[13px]">
+                <div [id]="item.idName" class="carteProjets mt-6 pt-[9px] w-[408px] h-[474px] bg-[#ffffff10] rounded-[42px] mx-auto backdrop-blur-3xl hover:shadow-ombre2 duration-500 max-sm:w-[304px] max-sm:h-[365px] max-sm:rounded-[46px] max-sm:pt-[13px]">
                     <div class="mx-auto w-[390px] max-sm:w-[274px] ">
                         <img [ngSrc]="item.img" [alt]="item.nom" width="390" height="292">
                     </div>
@@ -68,16 +68,26 @@
                 </div>
             }
             @if(User() == projetsUx()){
-                <div class="w-[408px] h-[474px] rounded-[42px] overflow-hidden cursor-pointer hover:shadow-ombre2 duration-500">
-                    <div class="absolute mx-auto">
+                <a 
+                  [id]="item.idName"
+                  class="w-[408px] h-[474px] rounded-[42px] overflow-hidden cursor-pointer hover:shadow-ombre2 duration-500 max-sm:w-[297px] max-sm:h-[344px] max-sm:mx-auto"
+                  [href]="item.fichier"
+                >
+                    <div class="absolute mx-auto max-sm:w-[297px] max-sm:h-[344px] rounded-[42px] overflow-hidden">
                         <img [ngSrc]="item.img" [alt]="item.nom" width="407.9" height="473.9">
                     </div>
-                    <div class="absolute w-[408px] h-[474px] bg-[#0000001f] rounded-[42px] "></div>
-                    <div class="relative justify-self-end w-[59px] h-[59px] rounded-tr-[42px] rounded-bl-[42px] bg-[#1D2025] border-[1px] border-orange-500"></div>
-                    <div class="relative w-[224px] h-[72px] rounded-tr-[42px] rounded-bl-[42px] bg-[#1D2025] border-[1px] border-orange-500 mt-[343px] text-center flex flex-col justify-center text-xl text-orange-500 font-semibold">
+                    <div class="absolute w-[408px] h-[474px] bg-[#0000001f] rounded-[42px] max-sm:w-[297px] max-sm:h-[344px]"></div>
+                    <div class="relative justify-self-end w-[59px] h-[59px] rounded-tr-[42px] rounded-bl-[42px] bg-[#1D2025] border-[1px] border-orange-500  justify-center items-center flex hover:scale-[120%] duration-300" >
+                        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.125 12.4583V18.2083C20.125 18.7167 19.9231 19.2042 19.5636 19.5636C19.2042 19.9231 18.7167 20.125 18.2083 20.125H4.79167C4.28334 20.125 3.79582 19.9231 3.43638 19.5636C3.07693 19.2042 2.875 18.7167 2.875 18.2083V4.79167C2.875 4.28334 3.07693 3.79582 3.43638 3.43638C3.79582 3.07693 4.28334 2.875 4.79167 2.875H10.5417" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.125 2.875L11.5 11.5" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.375 2.875H20.125V8.625" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="relative w-[224px] h-[72px] rounded-tr-[42px] rounded-bl-[42px] bg-[#1D2025] border-[1px] border-orange-500 mt-[343px] text-center flex flex-col justify-center text-xl text-orange-500 font-semibold max-sm:mt-[213px]">
                         {{item.nom}}
                     </div>
-                </div>
+                </a>
             }
         }
     </div>

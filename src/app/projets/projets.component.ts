@@ -45,20 +45,49 @@ export class ProjetsComponent implements AfterViewInit {
   
   ngAfterViewInit(): void {
    gsap.registerPlugin(ScrollTrigger);
- 
+   
    gsap.from('.projets', {
      opacity :0,
      duration : 3,
      delay: 0.3,
    })
  
+   gsap.from('#basculer', {
+    opacity :0,
+    duration : 2,
+    delay: 2,
+  })
+   
    gsap.from('.description', {
      translateY : 50,
      opacity :0,
-     duration : 2,
+     duration : 1.5,
      delay: 0.3,
    })
  
+   gsap.from('#adja', {
+     opacity :0,
+    translateY : 50,
+    duration : 2,
+    delay: 2,
+    scrollTrigger:{
+      trigger :'#MBI',
+      start :'top 75%',
+    }
+  })
+
+  gsap.from('#bwatch', {
+    opacity :0,
+    translateY : 50,
+    duration : 2,
+    delay: 2,
+    scrollTrigger:{
+      trigger :'#MBI',
+      start :'top 75%',
+    }
+  })
+
+
    gsap.from('#MBI', {
      translateY : 50,
      opacity :0,

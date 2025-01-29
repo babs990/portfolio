@@ -351,7 +351,7 @@
             >
                 Projets
             </div>
-            <div class="grid grid-cols-[408px_408px] gap-20 mt-12 justify-center max-[970px]:grid-cols-[408px] max-sm:w-[304px] max-sm:gap-8 max-sm:mt-6 max-sm:mx-auto" >
+            <div class="grid grid-cols-[408px_408px] gap-20 mt-12 justify-center max-[970px]:grid-cols-[408px] max-sm:w-[304px] max-sm:gap-8 max-sm:mt-6 max-sm:mx-auto overflow-hidden" >
                 @for (item of Ui(); track item.numb) {
                     <div class="carteProjets mt-6 pt-[9px] w-[408px] h-[474px] bg-[#ffffff10] rounded-[42px] mx-auto backdrop-blur-3xl hover:shadow-ombre2 duration-500 max-sm:w-[304px] max-sm:h-[365px] max-sm:rounded-[46px] max-sm:pt-[13px]" [class.bg-[#00000057]]="mode() == 'claire'">
                         <div class="mx-auto w-[390px] max-sm:w-[274px] ">

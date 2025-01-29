@@ -48,6 +48,7 @@
             }
         </div>
     }
+
     @if (skill() == 'ux') {
         <div id="basculer" class="w-[124px] h-[40px] border-[1px] border-orange-500 rounded-full mt-10 mx-auto flex">
             <div id="fond" class="w-[62px] h-[40px] bg-orange-500 rounded-full absolute z-0 duration-200">
@@ -80,7 +81,7 @@
                         <div class="w-[310px] font-light mx-auto mt-[12px] mb-[14px] max-sm:text-xs max-sm:font-extralight max-sm:mt-[8px] max-sm:mb-[10px] max-sm:w-[235px]">
                             {{item.description}}
                         </div>
-                        <div class="flex justify-self-center gap-[6px] ">
+                        <div class="flex w-[78px] mx-auto gap-[6px] ">
                             <a [href]="item.dribbble" target="_blank" class="hover:scale-[110%] duration-300 cursor-pointer h-[37px] z-20">
                                 <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg" >
                                     <rect width="36" height="37" rx="18" fill="#F97316"/>

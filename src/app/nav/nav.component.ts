@@ -14,6 +14,7 @@ export class NavComponent implements OnInit {
   element : any
   router = inject(Router)
   source:string =''
+  source2 : string =''
   skill = signal(localStorage.getItem('skill'))
   
 
@@ -25,12 +26,14 @@ export class NavComponent implements OnInit {
     if(this.source == 'nocturne.svg'){
       this.mode.emit('claire')
       this.source = 'sun.svg'
+      this.source2 = 'sun2.svg'
       localStorage.setItem('src','sun.svg')
       localStorage.setItem('mode','claire')
     }
     else{
       this.mode.emit('nuit')
       this.source = 'nocturne.svg'
+      this.source2 = 'nocturne2.svg'
       localStorage.setItem('src','nocturne.svg')
       localStorage.setItem('mode','nuit')
     }
@@ -39,9 +42,15 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
     if(this.src == ''){
       this.source = 'nocturne.svg'
+      this.source2 = 'nocturne2.svg'
     }
     else{
       this.source = this.src
+      if(this.src == 'nocturne.svg'){
+        this.source2 = 'nocturne2.svg'
+      }else{
+        this.source2 = 'nocturne2.svg'
+      }
     }
   }
 

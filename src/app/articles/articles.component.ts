@@ -15,6 +15,7 @@ import { RouterLink } from '@angular/router';
 })
 export class ArticlesComponent implements AfterViewInit {
 
+  skill = signal(localStorage.getItem('skill'))
   src = localStorage.getItem('src') || ''
   mode = signal(localStorage.getItem('mode') || 'nuit')
   

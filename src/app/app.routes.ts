@@ -5,6 +5,7 @@ import { ProjetsComponent } from './projets/projets.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { AngularComponent } from './articles/angular/angular.component';
 import { ChoiceComponent } from './choice/choice.component';
+import { UxComponent } from './articles/ux/ux.component';
 
 export const routes: Routes = [
     {
@@ -42,7 +43,13 @@ export const routes: Routes = [
                 path: 'angular',
                 component: AngularComponent,
                 title: 'Angular'
+            },   
+            {
+                path: 'ux',
+                component: UxComponent,
+                title: 'User Experience'
             },        
+     
         ]
     },
     {path : '', redirectTo : '/choice', pathMatch : 'full'}

@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component, ElementRef, EventEmitter, inject, Input, input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, inject, Input, input, OnInit, Output, signal } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
@@ -14,6 +14,8 @@ export class NavComponent implements OnInit {
   element : any
   router = inject(Router)
   source:string =''
+  skill = signal(localStorage.getItem('skill'))
+  
 
   @Input() src = 'nocturne.svg'
   @Output() mode: EventEmitter<string> = new EventEmitter()
@@ -46,6 +48,18 @@ export class NavComponent implements OnInit {
 
   constructor(el: ElementRef){
     this.element = el
+  }
+
+  basculerDev(){
+    localStorage.setItem('skill','dev')
+    this.skill.set(localStorage.getItem('skill'))
+    window.location.reload()
+  }
+
+  basculerUx(){
+    localStorage.setItem('skill','ux')
+    this.skill.set(localStorage.getItem('skill'))
+    window.location.reload()
   }
 
   apropos(){

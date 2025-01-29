@@ -286,7 +286,7 @@
                 A travers mes projets j’ai eu à explorer pas mal d’outils et de méthodologies de conception. Voici les outils avec lequel je travail le plus et dont j’ai une certaine expertise.
             </div>
             <div 
-              class="max-[970px]:w-[700px] max-[720px]:w-[350px] max-[720px]:grid max-sm:gap-8 rounded-[48px] w-[896px] bg-[#1D2025] shadow-ombre1 border-[1px] border-[#f9731647] border-dashed mx-auto mt-10 max-sm:mt-6 flex justify-center py-14 gap-28 max-sm:py-10"
+              class="max-[970px]:w-[700px] max-[720px]:w-[350px] max-[720px]:grid max-sm:gap-8 rounded-[48px] w-[896px] bg-[#1D2025] shadow-ombre1 border-[1px] border-[#f9731647] border-dashed mx-auto mt-10 max-sm:mt-6 flex justify-center py-14 gap-28 max-sm:py-10 text-white"
               [class.border-orange-500]="mode() == 'claire'"
             >
                 <!-- outils -->
@@ -351,9 +351,9 @@
             >
                 Projets
             </div>
-            <div class="grid grid-cols-[408px_408px] gap-20 mt-12 justify-center max-[970px]:grid-cols-[408px] max-sm:w-[304px] max-sm:gap-8 max-sm:mt-6 max-sm:mx-auto">
+            <div class="grid grid-cols-[408px_408px] gap-20 mt-12 justify-center max-[970px]:grid-cols-[408px] max-sm:w-[304px] max-sm:gap-8 max-sm:mt-6 max-sm:mx-auto" >
                 @for (item of Ui(); track item.numb) {
-                    <div class="carteProjets mt-6 pt-[9px] w-[408px] h-[474px] bg-[#ffffff10] rounded-[42px] mx-auto backdrop-blur-3xl hover:shadow-ombre2 duration-500 max-sm:w-[304px] max-sm:h-[365px] max-sm:rounded-[46px] max-sm:pt-[13px]">
+                    <div class="carteProjets mt-6 pt-[9px] w-[408px] h-[474px] bg-[#00000057] rounded-[42px] mx-auto backdrop-blur-3xl hover:shadow-ombre2 duration-500 max-sm:w-[304px] max-sm:h-[365px] max-sm:rounded-[46px] max-sm:pt-[13px]" [class.bg-[#00000057]]="mode() == 'claire'">
                         <div class="mx-auto w-[390px] max-sm:w-[274px] ">
                             <img [ngSrc]="item.img" [alt]="item.nom" width="390" height="292">
                         </div>

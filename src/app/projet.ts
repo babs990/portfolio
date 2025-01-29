@@ -34,5 +34,84 @@ export const projets = [
         lien : 'https://mtn-app-phi.vercel.app/',
         img: 'mtn.png'
     },
+]
 
+export const outils = [
+    {
+        id : 1,
+        title : 'Figma',
+        type : 'techno'
+    },
+    {
+        id : 2,
+        title : 'Illustrator',
+        type : 'techno'
+    },
+    {
+        id : 3,
+        title : 'Photoshop',
+        type : 'techno'
+    },
+    {
+        id : 4,
+        title : 'InDesign',
+        type : 'techno'
+    },
+    {
+        id : 5,
+        title : 'Design thinking',
+        type : 'ux'
+    },
+    {
+        id : 6,
+        title : 'Design Sprint',
+        type : 'ux'
+    },
+    {
+        id : 7,
+        title : 'Persona',
+        type : 'ux'
+    },
+    {
+        id : 8,
+        title : 'User flow',
+        type : 'ux'
+    },
+    {
+        id : 9,
+        title : 'Wireframe',
+        type : 'ux'
+    },
+
+]
+
+export const projetsUi = [
+    {
+        numb: 1,
+        nom: 'Les recettes de Adja',
+        idName : 'adja',
+        description : 'Design UI d’une application mobile destinée a la vente de nourriture en ligne.',
+        dribbble : 'https://dribbble.com/shots/25495572-Les-recettes-de-Adja-mobile-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share',
+        behance : 'https://www.behance.net/gallery/216967077/Les-recettes-de-Adja',
+        img: 'Adja.png'
+    },
+    {
+        numb: 2,
+        nom: 'B-WATCH',
+        idName : 'bwatch',
+        description : 'Design UI d’une application web destinée a la vente de montre en ligne.',
+        dribbble : 'https://dribbble.com/shots/25495572-Les-recettes-de-Adja-mobile-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share',
+        behance : 'https://www.behance.net/gallery/209257233/B-WATCH-project',
+        img: 'bwatch2.png'
+    },
+]
+
+export const projetUx = [
+    {
+        numb: 1,
+        idName : 'sengame',
+        nom: 'SenGame app',
+        fichier : 'sengame.pdf',
+        img: 'sengame.png'
+    },
 ]

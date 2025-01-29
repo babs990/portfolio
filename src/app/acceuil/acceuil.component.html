@@ -1,215 +1,465 @@
 <div class="bg-[#1D2025] duration-150 " [class.bg-[#d4d4d4]]="mode() == 'claire'">
-    <app-nav [src]="src" (mode)="modeDark($event)"></app-nav>
 
-    <div class="flex justify-center max-[1080px]:grid">
-        <!-- head gauche -->
+    <!-- dev mode -->
+    @if (skill() == 'dev') {
+
+        <app-nav [src]="src" (mode)="modeDark($event)"></app-nav>
+    
+        <div class="flex justify-center max-[1080px]:grid">
+            <!-- head gauche -->
+            <div 
+              class=" duration-150  w-[530px]  gauche pt-[130px] max-[1080px]:pt-[60px] max-sm:w-[296px] max-sm:pt-24 z-50"
+              [class.text-black]="mode() == 'claire'"
+              [class.text-white]="mode() != 'claire'"
+              [class.gaucheLight]="mode() == 'claire'"
+            >
+                <div class="text-6xl font-bold overflow-hidden max-sm:text-3xl ">
+                    <div class="translate-y-[100%] salut">
+                        Salut! Je suis Babacar Nguirane
+                    </div>
+                </div>
+                <div class="text-2xl my-8 overflow-hidden max-sm:text-sm max-sm:mt-5">
+                    <div class="passion translate-y-[-100%] ">
+                        Passionné par la création d’interface web attractive et moderne, je suis développeur web front-end.
+                    </div>
+                </div>
+                <div class="flex gap-3 items-center animate-bounce max-sm:mt-9">
+                    <div 
+                      class=" w-[220px] pt-2 h-[50px] text-2xl text-[#1D2025] font-semibold bg-orange-500 rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm max-sm:pt-1 cursor-pointer hover:scale-[105%] hover:text-black duration-500"
+                      (click)="contact()"
+                      [class.text-neutral-300]="mode() == 'claire'"
+                    >
+                        Contactez moi 
+                    </div>
+                    <a target="_blank" 
+                      href="https://www.linkedin.com/in/serigne-khalifa-ababacar-sy-nguirane-675676273?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoysBPWGZSXiniZxeoiBenA%3D%3D"
+                      class="cursor-pointer hover:scale-[110%] duration-500"
+                    >
+                        <img ngSrc="LinkedIn.svg" alt="linkedIn" width="44" height="44" class="max-sm:w-[28px] max-sm:h-[28px]">
+                    </a>
+                    <a target="_blank"  href="https://github.com/babs990" class="cursor-pointer hover:scale-[110%] duration-500">
+                        <img ngSrc="GitHub.svg" alt="github" width="44" height="44" class="max-sm:w-[28px] max-sm:h-[28px] ">
+                    </a>
+                </div>
+    
+            </div>
+            <!-- blur -->
+            <img ngSrc="blur.svg" alt="background" width="483" height="354" class="absolute top-[230px] left-0 max-[1080px]:left-0 max-[1080px]:right-0 max-[1080px]:mx-auto max-sm:top-[80px] z-10" priority="high">
+    
+        
+            <!-- head droit -->
+            <div class="pt-[70px] pl-[70px] babs max-[1080px]:pl-0 max-sm:mx-auto pb-6">
+                <img ngSrc="imageBabsV.png" alt="image" width="503" height="458" priority="high" class="max-sm:w-[171.33px] max-sm:h-[156px]">
+            </div>
+        </div>
+    
+        <div class="trait h-1 w-full duration-150" [class.traitLight]="mode() == 'claire'"></div>
+    
+        <!-- Outils et technos -->
         <div 
-          class=" duration-150  w-[530px]  gauche pt-[130px] max-[1080px]:pt-[60px] max-sm:w-[296px] max-sm:pt-24 z-50"
+          class=" mt-20 pb-24 max-sm:mt-12 outils max-sm:pb-12"
           [class.text-black]="mode() == 'claire'"
           [class.text-white]="mode() != 'claire'"
-          [class.gaucheLight]="mode() == 'claire'"
         >
-            <div class="text-6xl font-bold overflow-hidden max-sm:text-3xl ">
-                <div class="translate-y-[100%] salut">
-                    Salut! Je suis Babacar Nguirane
-                </div>
+            <div class=" font-bold text-5xl text-center max-sm:text-2xl">
+                Outils et technologies
             </div>
-            <div class="text-2xl my-8 overflow-hidden max-sm:text-sm max-sm:mt-5">
-                <div class="passion translate-y-[-100%] ">
-                    Passionné par la création d’interface web attractive, je suis développeur front-end et UX designer.
-                </div>
+            <div class="w-[748px] text-xl font-normal mx-auto mt-7 max-[970px]:w-[620px] max-sm:text-sm max-sm:w-[296px] max-sm:mt-6">
+                A travers mes projets j’ai eu à explorer pas mal de technologies et d’outils. Voici les outils avec lesquel je travaille le plus et dont j’ai une certaine expertise.
             </div>
-            <div class="flex gap-3 items-center animate-bounce max-sm:mt-9">
-                <div 
-                  class=" w-[220px] pt-2 h-[50px] text-2xl text-[#1D2025] font-semibold bg-orange-500 rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm max-sm:pt-1 cursor-pointer hover:scale-[105%] hover:text-black duration-500"
-                  (click)="contact()"
-                  [class.text-neutral-300]="mode() == 'claire'"
-                >
-                    Contactez moi 
+            <div 
+              class="max-[970px]:w-[700px] max-[720px]:w-[286px] rounded-[48px] w-[896px] bg-[#1D2025] shadow-ombre1 border-[1px] border-[#f9731647] border-dashed mx-auto mt-10 max-sm:mt-6 max-sm:w-[296px]"
+              [class.border-orange-500]="mode() == 'claire'"
+            >
+                <div class="pt-10 flex justify-center gap-16 max-[720px]:gap-3">
+                    <img ngSrc="html.png" alt="html" width="121" height="121" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
+                    <img ngSrc="css.png" alt="css" width="86" height="121" class="max-[720px]:w-[28px] max-[720px]:h-[40px]">
+                    <img ngSrc="javascript.png" alt="js" width="112" height="112" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
+                    <img ngSrc="angular.png" alt="angular" width="107" height="121" class="max-[720px]:w-[39px] max-[720px]:h-[40px]">
                 </div>
-                <a 
-                  href="https://www.linkedin.com/in/serigne-khalifa-ababacar-sy-nguirane-675676273?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoysBPWGZSXiniZxeoiBenA%3D%3D"
-                  class="cursor-pointer hover:scale-[110%] duration-500"
-                >
-                    <img ngSrc="LinkedIn.svg" alt="linkedIn" width="44" height="44" class="max-sm:w-[28px] max-sm:h-[28px]">
-                </a>
-                <a href="https://github.com/babs990" class="cursor-pointer hover:scale-[110%] duration-500">
-                    <img ngSrc="GitHub.svg" alt="github" width="44" height="44" class="max-sm:w-[28px] max-sm:h-[28px] ">
-                </a>
-            </div>
-
-        </div>
-        <!-- blur -->
-        <img ngSrc="blur.svg" alt="background" width="483" height="354" class="absolute top-[230px] left-0 max-[1080px]:left-0 max-[1080px]:right-0 max-[1080px]:mx-auto max-sm:top-[80px] z-10" priority="high">
-
+                <div class="flex pt-10 justify-center gap-10 items-center max-[720px]:gap-3">
+                    <img ngSrc="typescript.png" alt="typescript" width="110" height="111" class="max-[720px]:w-[40px] max-[720px]:h-[41px]">
+                    <img ngSrc="tailwind.png" alt="tailwind" width="173" height="43" class="max-[720px]:w-[80px] max-[720px]:h-[20px]">
+                    <img ngSrc="visual.png" alt="visual" width="80" height="80" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
+                </div>
+                <div class="flex pt-10 justify-center gap-10 items-center pb-10 max-[720px]:gap-3 ">
+                    <img ngSrc="github.png" alt="illustrator" width="112" height="100" class="max-[720px]:w-[44px] max-[720px]:h-[40px]">
+                    <img ngSrc="git.png" alt="figma" width="159" height="60" class="max-[720px]:w-[62px] max-[720px]:h-[24px]">
+                    <img ngSrc="vercel.png" alt="indesign" width="160" height="47" class="max-[720px]:w-[63px] max-[720px]:h-[18px]">
+                </div>
     
-        <!-- head droit -->
-        <div class="pt-[70px] pl-[70px] babs max-[1080px]:pl-0 max-sm:mx-auto pb-6">
-            <img ngSrc="imageBabs.png" alt="image" width="503" height="458" priority="high" class="max-sm:w-[171.33px] max-sm:h-[156px]">
+            </div>
         </div>
-    </div>
-
-    <div class="trait h-1 w-full duration-150" [class.traitLight]="mode() == 'claire'"></div>
-
-    <!-- Outils et technos -->
-    <div 
-      class=" mt-20 pb-24 max-sm:mt-12 outils max-sm:pb-12"
-      [class.text-black]="mode() == 'claire'"
-      [class.text-white]="mode() != 'claire'"
-    >
-        <div class=" font-bold text-5xl text-center max-sm:text-2xl">
-            Outils et technologies
-        </div>
-        <div class="w-[748px] text-xl font-normal mx-auto mt-7 max-[970px]:w-[620px] max-sm:text-sm max-sm:w-[296px] max-sm:mt-6">
-            A travers mes projets j’ai eu à explorer pas mal de technologies et d’outils. Voici les outils avec lesquel je travaille le plus et dont j’ai une certaine expertise.
-        </div>
+    
         <div 
-          class="max-[970px]:w-[700px] max-[720px]:w-[286px] rounded-[48px] w-[896px] bg-[#1D2025] shadow-ombre1 border-[1px] border-[#f9731647] border-dashed mx-auto mt-10 max-sm:mt-6"
-          [class.border-orange-500]="mode() == 'claire'"
-        >
-            <div class="pt-10 flex justify-center gap-16 max-[720px]:gap-3">
-                <img ngSrc="html.png" alt="html" width="121" height="121" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
-                <img ngSrc="css.png" alt="css" width="86" height="121" class="max-[720px]:w-[28px] max-[720px]:h-[40px]">
-                <img ngSrc="javascript.png" alt="js" width="112" height="112" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
-                <img ngSrc="angular.png" alt="angular" width="107" height="121" class="max-[720px]:w-[39px] max-[720px]:h-[40px]">
-            </div>
-            <div class="flex pt-10 justify-center gap-10 items-center max-[720px]:gap-3">
-                <img ngSrc="typescript.png" alt="typescript" width="110" height="111" class="max-[720px]:w-[40px] max-[720px]:h-[41px]">
-                <img ngSrc="tailwind.png" alt="tailwind" width="173" height="43" class="max-[720px]:w-[80px] max-[720px]:h-[20px]">
-                <img ngSrc="visual.png" alt="visual" width="80" height="80" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
-            </div>
-            <div class="flex pt-10 justify-center gap-10 items-center pb-10 max-[720px]:gap-3 ">
-                <img ngSrc="illustrator.png" alt="illustrator" width="98" height="96" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
-                <img ngSrc="figma.png" alt="figma" width="67" height="102" class="max-[720px]:w-[26.27px] max-[720px]:h-[40px]">
-                <img ngSrc="indesign.png" alt="indesign" width="88" height="86" class="max-[720px]:w-[40px] max-[720px]:h-[40px]">
-            </div>
-
-        </div>
-    </div>
-
-    <div 
-      class=" animate-bounce w-[220px] mx-auto pt-2 mt-5 h-[50px] text-2xl text-[#1D2025] font-semibold bg-orange-500 rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm max-sm:pt-1 cursor-pointer max-sm:mt-0 max-sm:mb-5"
-      [class.text-black]="mode() == 'claire'"
-    >
-        <div class="hover:scale-[105%] duration-500" routerLink="/apropos">
-            Mon histoire
-        </div>
-    </div>
-
-    <!-- Projets -->
-    <div class="mt-40 text-white  max-[1140px]:mt-20">
-        <div 
-          class="text-5xl text-center font-bold max-sm:text-2xl projets duration-150"
+          class=" animate-bounce w-[220px] mx-auto pt-2 mt-5 h-[50px] text-2xl text-[#1D2025] font-semibold bg-orange-500 rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm max-sm:pt-1 cursor-pointer max-sm:mt-0 max-sm:mb-5"
           [class.text-black]="mode() == 'claire'"
         >
-            Projets
+            <div class="hover:scale-[105%] duration-500" routerLink="/apropos">
+                Mon histoire
+            </div>
         </div>
-        <div class="grid-cols-[345px_345px_345px] grid justify-center mt-14 gap-5 max-[1140px]:grid-cols-[345px] max-[1140px]:gap-11 max-sm:grid-cols-[296px] max-sm:mt-6">
-            @for (item of projets3(); track item) {
-                <div class="w-[345px] max-sm:w-[296px] carteProjets">
-                    <!-- image -->
-                    <div class="w-full rounded-full h-[345px] border-[1px] border-orange-500 border-dashed p-[6px] max-sm:w-[189px] max-sm:h-[189px] max-sm:p-[6px] max-sm:mx-auto">
-                        <img 
-                          [ngSrc]="item.img" 
-                          [alt]="item.nom" 
-                          width="331" 
-                          height="331" 
-                          class="hover:scale-[103%] duration-700 max-sm:w-[175px] max-sm:h-[175px]"
+    
+        <!-- Projets -->
+        <div class="mt-40 text-white  max-[1140px]:mt-20">
+            <div 
+              class="text-5xl text-center font-bold max-sm:text-2xl projets duration-150"
+              [class.text-black]="mode() == 'claire'"
+            >
+                Projets
+            </div>
+            <div class="grid-cols-[345px_345px_345px] grid justify-center mt-14 gap-5 max-[1140px]:grid-cols-[345px] max-[1140px]:gap-11 max-sm:grid-cols-[296px] max-sm:mt-6">
+                @for (item of projets3(); track item) {
+                    <div class="w-[345px] max-sm:w-[296px] carteProjets">
+                        <!-- image -->
+                        <div class="w-full rounded-full h-[345px] border-[1px] border-orange-500 border-dashed p-[6px] max-sm:w-[189px] max-sm:h-[189px] max-sm:p-[6px] max-sm:mx-auto">
+                            <img 
+                              [ngSrc]="item.img" 
+                              [alt]="item.nom" 
+                              width="331" 
+                              height="331" 
+                              class="hover:scale-[103%] duration-700 max-sm:w-[175px] max-sm:h-[175px]"
+                            >
+                        </div>
+    
+                        <!-- titre et description -->
+                        <div 
+                          class="w-full border-[1px] border-[#f9731647] mt-4 py-6 pl-12 rounded-[43px] bg-[#1D2025] hover:shadow-ombre1 duration-700 max-sm:mt-3 max-sm:pl-9"
+                          [class.border-orange-500]="mode() == 'claire'"
                         >
+                            <div class="text-3xl font-medium max-sm:text-xl">
+                                {{item.nom}}
+                            </div>
+                            <div class="text-base font-light my-5 w-[231px] max-sm:text-xs">
+                                {{item.description}}
+                            </div>
+                            <div class="flex gap-3 items-center">
+                                <a [href]="item.lien">
+                                    <img ngSrc="link.svg" alt="link" width="34" height="17" class="cursor-pointer">
+                                </a>
+                                <a [href]="item.lien" target="_blank" class="text-sm font-semibold cursor-pointer hover:text-cyan-800 duration-500">
+                                    {{item.lien}}
+                                </a>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- titre et description -->
+                }
+            </div>
+            <div 
+              class=" w-[220px]  h-[50px] text-2xl text-[#1D2025] font-semibold bg-orange-500 rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm flex justify-center gap-3 mx-auto mt-14 max-sm:items-center cursor-pointer animate-bounce"
+              routerLink="/projets"
+            >
+                <div class="pt-2 max-sm:pt-0">
+                    Voir plus 
+                </div>
+                <img ngSrc="fleche.svg" alt="fleche" width="12" height="26" class="max-sm:w-[6px] max-sm:h-[11px]" >
+            </div>
+        </div>
+    
+        <!-- Article -->
+        <div class="w-[739px] max-[900px]:w-[600px] max-sm:w-[296px] mx-auto">
+            <div 
+              class="w-[739px] rounded-[33px] backdrop-blur-3xl flex justify-center gap-20 py-9 place-self-center mt-56 text-white max-[900px]:w-[600px] max-[900px]:gap-10 max-sm:grid max-sm:w-[296px] max-sm:py-5 max-sm:mt-24 overflow-hidden article"
+              [class.bg-[#1d20256c]]="mode() == 'claire'"
+              [class.bg-[#ffffff27]]="mode() != 'claire'"
+            >
+                <div class="w-[277px] h-[277px] bg-[#1D2025] rounded-full p-[18px] max-sm:w-[91px] max-sm:h-[91px] max-sm:p-[8px] max-sm:mx-auto imgArticle">
+                    <img ngSrc="angularArticle.png" alt="angular" width="237" height="248">
+                </div>
+                <div class="w-[294px] max-sm:w-[262px] descArticle">
+                    <div class="font-semibold text-3xl max-sm:text-xl">
+                        C’est quoi Angular?
+                    </div>
+                    <div class="text-base my-10 max-sm:text-xs max-sm:mt-5 max-sm:mb-8">
+                        Dans cet article j’explique de manière claire c’est quoi Angular ainsi que les avantages et les inconvénients de ce Framework.
+                    </div>
                     <div 
-                      class="w-full border-[1px] border-[#f9731647] mt-4 py-6 pl-12 rounded-[43px] bg-[#1D2025] hover:shadow-ombre1 duration-700 max-sm:mt-3 max-sm:pl-9"
-                      [class.border-orange-500]="mode() == 'claire'"
+                      class=" w-[220px]  h-[50px] text-2xl text-orange-500 border-[1px] border-orange-500 font-semibold bg-[#1D2025] rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm flex justify-center gap-3 mx-auto max-sm:items-center max-sm:pt-[1px]  cursor-pointer pt-2 animate-bounce hover:border-white duration-300 hover:text-white"
+                      routerLink="/articles/angular"
                     >
-                        <div class="text-3xl font-medium max-sm:text-xl">
+                        Lire l’article
+                    </div>    
+                </div>
+            </div>
+            <div 
+              class="text-base text-cyan-600 mt-8 underline underline-offset-8 mb-4 hover:text-cyan-400 duration-500 cursor-pointer"
+              routerLink="/articles"
+            >
+                Voir tous les articles
+            </div>
+        </div>
+    
+        <!-- contact -->
+        <div 
+          id="contact" 
+          class= "mt-52 font-bold text-6xl max-sm:text-3xl max-sm:mt-20" 
+          [class.text-black]="mode() == 'claire'"
+          [class.text-white]="mode() != 'claire'"
+        >
+            <div class="text-center">
+                Contactez moi
+            </div>
+            <div class="flex mt-20 justify-center gap-10 animate-bounce max-sm:gap-6 max-sm:mt-14">
+                <a href="https://wa.me/+221773782956" class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]">
+                    <img ngSrc="whats-app.svg" alt="whatsapp" width="94" height="94">
+                </a>
+                <a href="https://www.instagram.com/babs_990?igsh=MWc1Ymo0Z3ZvMHZrNw==" class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]">
+                    <img ngSrc="instagram.svg" alt="instagram" width="94" height="94">
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/serigne-khalifa-ababacar-sy-nguirane-675676273?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoysBPWGZSXiniZxeoiBenA%3D%3D"
+                  class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]"
+                >
+                    <img ngSrc="LinkedIn.svg" alt="linkedIn" width="94" height="94">
+                </a>
+            </div>
+        </div>
+
+        <app-footer></app-footer>
+
+    }
+
+    <!-- ux mode -->
+    @if (skill() == 'ux') {
+
+        <app-nav [src]="src" (mode)="modeDark($event)"></app-nav>
+    
+        <div class="flex justify-center max-[1080px]:grid">
+            <!-- head gauche -->
+            <div 
+              class=" duration-150  w-[530px]  gauche pt-[130px] max-[1080px]:pt-[60px] max-sm:w-[296px] max-sm:pt-24 z-50"
+              [class.text-black]="mode() == 'claire'"
+              [class.text-white]="mode() != 'claire'"
+              [class.gaucheLight]="mode() == 'claire'"
+            >
+                <div class="text-6xl font-bold overflow-hidden max-sm:text-3xl ">
+                    <div class="translate-y-[100%] salut">
+                        Salut! Je suis Babacar Nguirane
+                    </div>
+                </div>
+                <div class="text-2xl mt-8 mb-10 overflow-hidden max-sm:text-sm max-sm:mt-5">
+                    <div class="passion translate-y-[-100%] ">
+                        Passionné par la création d’interface web et mobile attractive et moderne, je suis UX/UI Designer.
+                    </div>
+                </div>
+                <div class="flex gap-3 items-center animate-bounce max-sm:mt-9">
+                    <div 
+                      class=" w-[220px] pt-2 h-[50px] text-2xl text-[#1D2025] font-semibold bg-orange-500 rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm max-sm:pt-1 cursor-pointer hover:scale-[105%] hover:text-black duration-500"
+                      (click)="contact()"
+                      [class.text-neutral-300]="mode() == 'claire'"
+                    >
+                        Contactez moi 
+                    </div>
+                    <a target="_blank"
+                      href="https://dribbble.com/babs990/about?utm_source=Clipboard_%22clipboard_about%22&utm_campaign=%22babs990%22&utm_content=%22About%20babs990%22&utm_medium=Social_Share"
+                    >
+                        <img ngSrc="dribbble.svg" alt="dribbble" width="44" height="44" class="max-sm:w-[28px] max-sm:h-[28px]">
+                    </a>
+                    <a target="_blank" href="https://www.behance.net/babacarnguirane09" class="cursor-pointer hover:scale-[110%] duration-500">
+                        <img ngSrc="behance.svg" alt="behance" width="44" height="44" class="max-sm:w-[28px] max-sm:h-[28px] ">
+                    </a>
+                </div>
+    
+            </div>
+            <!-- blur -->
+            <img ngSrc="blur.svg" alt="background" width="483" height="354" class="absolute top-[230px] left-0 max-[1080px]:left-0 max-[1080px]:right-0 max-[1080px]:mx-auto max-sm:top-[80px] z-10" priority="high">
+    
+        
+            <!-- head droit -->
+            <div class="pt-[70px] pl-[70px] babs max-[1080px]:pl-0 max-sm:mx-auto pb-6">
+                <img ngSrc="imageBabs.png" alt="image" width="503" height="458" priority="high" class="max-sm:w-[171.33px] max-sm:h-[156px]">
+            </div>
+        </div>
+    
+        <div class="trait h-1 w-full duration-150" [class.traitLight]="mode() == 'claire'"></div>
+    
+        <!-- Outils et methodologies -->
+        <div 
+          class=" mt-20 pb-24 max-sm:mt-12 outils max-sm:pb-12"
+          [class.text-black]="mode() == 'claire'"
+          [class.text-white]="mode() != 'claire'"
+        >
+            <div class=" font-bold text-5xl text-center max-sm:text-2xl">
+                Outils et méthodologies
+            </div>
+            <div class="w-[748px] text-xl font-normal mx-auto mt-7 max-[970px]:w-[620px] max-sm:text-sm max-sm:w-[296px] max-sm:mt-6">
+                A travers mes projets j’ai eu à explorer pas mal d’outils et de méthodologies de conception. Voici les outils avec lequel je travail le plus et dont j’ai une certaine expertise.
+            </div>
+            <div 
+              class="max-[970px]:w-[700px] max-[720px]:w-[350px] max-[720px]:grid max-sm:gap-8 rounded-[48px] w-[896px] bg-[#1D2025] shadow-ombre1 border-[1px] border-[#f9731647] border-dashed mx-auto mt-10 max-sm:mt-6 flex justify-center py-14 gap-28 max-sm:py-10 text-white max-sm:w-[296px]"
+              [class.border-orange-500]="mode() == 'claire'"
+            >
+                <!-- outils -->
+                <div class="max-sm:mx-auto">
+                    <div class="text-3xl text-orange-500 font-bold underline underline-offset-8 mb-6 max-sm:text-xl">
+                        Outils
+                    </div>
+                    @for (item of techno(); track item) {
+                        <div class="">
+                            <div class="flex items-center gap-[21px] max-sm:gap-3">  
+                                <div class="h-[41px] w-[41px] rounded-full border-[1px] border-dashed border-orange-500 content-center justify-items-center max-sm:w-[24px] max-sm:h-[24px]">
+                                    <div class="w-[18px] h-[18px] bg-cyan-600 rounded-full max-sm:w-[10px] max-sm:h-[10px]"></div>
+                                </div>
+                                <div class="text-2xl font-medium max-sm:text-base">
+                                    {{item.title}}
+                                </div>
+                            </div>
+                            @if (item.id !== 4) {
+                                <div class="border-dashed border-l-[1px] my-[2px] border-orange-500 h-[41px] w-[0.1px] max-sm:ml-3 ml-[20.5px] max-sm:h-[18px] "></div>
+                            }
+                        </div>
+                    }
+                </div>
+                <!-- methodologies -->
+                <div class="">
+                    <div class="text-3xl text-orange-500 font-bold underline underline-offset-8 mb-6 max-sm:text-xl">
+                        méthodologies
+                    </div>
+                    @for (item of methode(); track item) {
+                        <div class="">
+                            <div class="flex items-center gap-[21px] max-sm:gap-3">  
+                                <div class="h-[41px] w-[41px] rounded-full border-[1px] border-dashed border-orange-500 content-center justify-items-center max-sm:w-[24px] max-sm:h-[24px]">
+                                    <div class="w-[18px] h-[18px] bg-[#5D3B88] rounded-full max-sm:w-[10px] max-sm:h-[10px]"></div>
+                                </div>
+                                <div class="text-2xl font-medium max-sm:text-base">
+                                    {{item.title}}
+                                </div>
+                            </div>
+                            @if (item.id !== 9) {
+                                <div class="border-dashed border-l-[1px] my-[2px] border-orange-500 h-[41px] w-[0.1px] max-sm:ml-3 ml-[20.5px] max-sm:h-[18px] "></div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    
+        <div 
+          class=" animate-bounce w-[220px] mx-auto pt-2 mt-5 h-[50px] text-2xl text-[#1D2025] font-semibold bg-orange-500 rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm max-sm:pt-1 cursor-pointer max-sm:mt-0 max-sm:mb-5"
+          [class.text-black]="mode() == 'claire'"
+        >
+            <div class="hover:scale-[105%] duration-500" routerLink="/apropos">
+                Mon histoire
+            </div>
+        </div>
+    
+        <!-- Projets -->
+        <div class="mt-40 text-white  max-[1140px]:mt-20">
+            <div 
+              class="text-5xl text-center font-bold max-sm:text-2xl projets duration-150"
+              [class.text-black]="mode() == 'claire'"
+            >
+                Projets
+            </div>
+            <div class="grid grid-cols-[408px_408px] gap-20 mt-12 justify-center max-[970px]:grid-cols-[408px] max-sm:w-[304px] max-sm:gap-8 max-sm:mt-6 max-sm:mx-auto" >
+                @for (item of Ui(); track item.numb) {
+                    <div class="carteProjets mt-6 pt-[9px] w-[408px] h-[474px] bg-[#ffffff10] rounded-[42px] mx-auto backdrop-blur-3xl hover:shadow-ombre2 duration-500 max-sm:w-[304px] max-sm:h-[365px] max-sm:rounded-[46px] max-sm:pt-[13px]" [class.bg-[#00000057]]="mode() == 'claire'">
+                        <div class="mx-auto w-[390px] max-sm:w-[274px] ">
+                            <img [ngSrc]="item.img" [alt]="item.nom" width="390" height="292">
+                        </div>
+                        <div class="mt-5 text-2xl font-bold text-center max-sm:text-xl max-sm:font-semibold">
                             {{item.nom}}
                         </div>
-                        <div class="text-base font-light my-5 w-[231px] max-sm:text-xs">
+                        <div class="w-[310px] font-light mx-auto mt-[12px] mb-[14px] max-sm:text-xs max-sm:font-extralight max-sm:mt-[8px] max-sm:mb-[10px] max-sm:w-[235px]">
                             {{item.description}}
                         </div>
-                        <div class="flex gap-3 items-center">
-                            <a [href]="item.lien">
-                                <img ngSrc="link.svg" alt="link" width="34" height="17" class="cursor-pointer">
+                        <div class="flex justify-self-center gap-[6px] ">
+                            <a [href]="item.dribbble" target="_blank" class="hover:scale-[110%] duration-300 cursor-pointer h-[37px] z-20">
+                                <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                                    <rect width="36" height="37" rx="18" fill="#F97316"/>
+                                    <path d="M17.9997 31.7142C25.1005 31.7142 30.8569 25.798 30.8569 18.4999C30.8569 11.2019 25.1005 5.28564 17.9997 5.28564C10.8989 5.28564 5.14258 11.2019 5.14258 18.4999C5.14258 25.798 10.8989 31.7142 17.9997 31.7142Z" stroke="#1D2025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M27.1834 9.06128C22.078 14.2889 15.262 15.9669 5.14258 16.6123" stroke="#1D2025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M30.8569 19.412C22.246 17.5097 15.0659 20.7612 9.55078 27.9387" stroke="#1D2025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.2246 6.04077C19.2445 13.9668 21.4899 18.4846 24.245 29.4489" stroke="#1D2025" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>   
                             </a>
-                            <a [href]="item.lien" class="text-sm font-semibold cursor-pointer hover:text-cyan-800 duration-500">
-                                {{item.lien}}
+                            <a [href]="item.behance" target="_blank" class="z-30 hover:scale-[110%] duration-300 cursor-pointer">
+                                <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="36" height="37" rx="18" fill="#F97316"/>
+                                    <path d="M25.9899 12.0539H20.9654V13.6552H26.0098L25.9899 12.0539ZM24.9295 23.07C24.5484 23.3594 24.0982 23.5063 23.6412 23.4902C23.3387 23.5264 23.0329 23.4905 22.743 23.385C22.4531 23.2795 22.1853 23.1065 21.9565 22.8769C21.5333 22.3271 21.313 21.6105 21.342 20.8781H27.9026C27.9499 20.1156 27.8931 19.3492 27.7342 18.6068C27.5804 17.9004 27.3114 17.2338 26.9413 16.6421C26.5688 16.0681 26.0877 15.5983 25.5341 15.2679C24.9181 14.9198 24.2387 14.7447 23.552 14.7568C22.9062 14.7514 22.2659 14.8943 21.6691 15.177C21.1225 15.4411 20.6273 15.8271 20.2122 16.3127C19.7984 16.808 19.4779 17.3956 19.2708 18.0389C19.0485 18.7335 18.9377 19.4684 18.9437 20.2081C18.9335 20.9583 19.0409 21.7046 19.2609 22.4113C19.4476 23.0513 19.7442 23.6421 20.133 24.1489C20.5352 24.6465 21.0296 25.0346 21.5799 25.2846C22.1934 25.5525 22.846 25.6835 23.5025 25.6707C24.4235 25.7036 25.3329 25.4273 26.1188 24.8757C26.9125 24.2294 27.484 23.2853 27.7342 22.2069H25.544C25.4267 22.5636 25.211 22.8667 24.9295 23.07ZM21.5303 18.391C21.6074 18.1079 21.7355 17.8464 21.9062 17.6234C22.0769 17.4004 22.2864 17.2208 22.5213 17.0963C22.8325 16.9358 23.1713 16.8582 23.5124 16.8692C23.7588 16.8451 24.0068 16.8823 24.2394 16.9784C24.4721 17.0744 24.6838 17.227 24.8602 17.4257C25.1969 17.898 25.413 18.468 25.4845 19.0724H21.3717C21.3878 18.8416 21.4243 18.6133 21.4808 18.391H21.5303ZM16.2878 17.8459C16.7922 17.6052 17.2304 17.2128 17.5563 16.7102C17.8558 16.1764 18.0046 15.5499 17.9824 14.9158C18.0018 14.3376 17.9034 13.7621 17.695 13.235C17.5199 12.7784 17.2388 12.3855 16.8824 12.0993C16.5045 11.8017 16.0753 11.6004 15.6238 11.5088C15.0894 11.3803 14.5444 11.3194 13.9985 11.3271H8.08203V25.6139H14.1273C14.679 25.6144 15.2285 25.5343 15.7625 25.3754C16.2687 25.2254 16.7482 24.9756 17.1797 24.6373C17.5976 24.3053 17.938 23.8607 18.1707 23.3426C18.4283 22.7631 18.5544 22.1187 18.5374 21.4687C18.5562 20.6632 18.359 19.8705 17.9725 19.1973C17.5569 18.5204 16.9404 18.04 16.2382 17.8459H16.2878ZM10.8272 13.7688H13.394C13.6298 13.7684 13.8652 13.7912 14.0976 13.8369C14.3116 13.8733 14.5171 13.9582 14.7021 14.0868C14.8808 14.2026 15.0257 14.3765 15.1183 14.5865C15.2331 14.8383 15.2878 15.1203 15.2769 15.4042C15.2954 15.6486 15.2628 15.8946 15.1818 16.1217C15.1008 16.3488 14.9737 16.5505 14.8111 16.7102C14.4565 16.9896 14.0321 17.1291 13.6021 17.1077H10.8272V13.7688ZM15.6238 22.2183C15.522 22.4497 15.368 22.6458 15.1778 22.7861C14.9799 22.9272 14.7618 23.0271 14.5336 23.0814C14.28 23.1464 14.0205 23.1769 13.7606 23.1722H10.7875V19.2541H13.7606C14.2708 19.2285 14.7747 19.3918 15.1976 19.7197C15.3887 19.9163 15.5367 20.1616 15.6297 20.4358C15.7227 20.7101 15.758 21.0055 15.7328 21.2983C15.7596 21.6105 15.7222 21.9256 15.6238 22.2183Z" fill="#1D2025"/>
+                                </svg>
                             </a>
                         </div>
+                        <div class="flex justify-between bottom-0  w-full  absolute z-0">
+                            <div class=" w-[44px] h-[41px] rounded-bl-[42px] rounded-tr-[42px] bg-orange-500"></div>
+                            <div class="w-[44px] h-[41px] rounded-tl-[42px] rounded-br-[42px] bg-orange-500"></div>
+                        </div>
                     </div>
-                </div>
-            }
-        </div>
-        <div 
-          class=" w-[220px]  h-[50px] text-2xl text-[#1D2025] font-semibold bg-orange-500 rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm flex justify-center gap-3 mx-auto mt-14 max-sm:items-center cursor-pointer animate-bounce"
-          routerLink="/projets"
-        >
-            <div class="pt-2 max-sm:pt-0">
-                Voir plus 
+    
+                }
             </div>
-            <img ngSrc="fleche.svg" alt="fleche" width="12" height="26" class="max-sm:w-[6px] max-sm:h-[11px]" >
-        </div>
-    </div>
-
-    <!-- Article -->
-    <div class="w-[739px] max-[900px]:w-[600px] max-sm:w-[296px] mx-auto">
-        <div 
-          class="w-[739px] rounded-[33px] backdrop-blur-3xl flex justify-center gap-20 py-9 place-self-center mt-56 text-white max-[900px]:w-[600px] max-[900px]:gap-10 max-sm:grid max-sm:w-[296px] max-sm:py-5 max-sm:mt-24 overflow-hidden article"
-          [class.bg-[#1d20256c]]="mode() == 'claire'"
-          [class.bg-[#ffffff27]]="mode() != 'claire'"
-        >
-            <div class="w-[277px] h-[277px] bg-[#1D2025] rounded-full p-[18px] max-sm:w-[91px] max-sm:h-[91px] max-sm:p-[8px] max-sm:mx-auto imgArticle">
-                <img ngSrc="angularArticle.png" alt="angular" width="237" height="248">
-            </div>
-            <div class="w-[294px] max-sm:w-[262px] descArticle">
-                <div class="font-semibold text-3xl max-sm:text-xl">
-                    C’est quoi Angular?
-                </div>
-                <div class="text-base my-10 max-sm:text-xs max-sm:mt-5 max-sm:mb-8">
-                    Dans cet article j’explique de manière claire c’est quoi Angular ainsi que les avantages et les inconvénients de ce Framework.
-                </div>
-                <div 
-                  class=" w-[220px]  h-[50px] text-2xl text-orange-500 border-[1px] border-orange-500 font-semibold bg-[#1D2025] rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm flex justify-center gap-3 mx-auto max-sm:items-center max-sm:pt-[1px]  cursor-pointer pt-2 animate-bounce hover:border-white duration-300 hover:text-white"
-                  routerLink="/articles/angular"
-                >
-                    Lire l’article
-                </div>    
-            </div>
-        </div>
-        <div 
-          class="text-base text-cyan-600 mt-8 underline underline-offset-8 mb-4 hover:text-cyan-400 duration-500 cursor-pointer"
-          routerLink="/articles"
-        >
-            Voir tous les articles
-        </div>
-    </div>
-
-    <!-- contact -->
-    <div 
-      id="contact" 
-      class= "mt-52 font-bold text-6xl max-sm:text-3xl max-sm:mt-20" 
-      [class.text-black]="mode() == 'claire'"
-      [class.text-white]="mode() != 'claire'"
-    >
-        <div class="text-center">
-            Contactez moi
-        </div>
-        <div class="flex mt-20 justify-center gap-10 animate-bounce max-sm:gap-6 max-sm:mt-14">
-            <a href="https://wa.me/+221773782956" class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]">
-                <img ngSrc="whats-app.svg" alt="whatsapp" width="94" height="94">
-            </a>
-            <a href="https://www.instagram.com/babs_990?igsh=MWc1Ymo0Z3ZvMHZrNw==" class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]">
-                <img ngSrc="instagram.svg" alt="instagram" width="94" height="94">
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/serigne-khalifa-ababacar-sy-nguirane-675676273?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoysBPWGZSXiniZxeoiBenA%3D%3D"
-              class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]"
+            <div 
+              class=" w-[220px]  h-[50px] text-2xl text-[#1D2025] font-semibold bg-orange-500 rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm flex justify-center gap-3 mx-auto mt-20 max-sm:items-center cursor-pointer animate-bounce"
+              routerLink="/projets"
             >
-                <img ngSrc="LinkedIn.svg" alt="linkedIn" width="94" height="94">
-            </a>
+                <div class="pt-2 max-sm:pt-0">
+                    Voir plus 
+                </div>
+                <img ngSrc="fleche.svg" alt="fleche" width="12" height="26" class="max-sm:w-[6px] max-sm:h-[11px]" >
+            </div>
         </div>
-    </div>
+    
+        <!-- Article -->
+        <div class="w-[739px] max-[900px]:w-[600px] max-sm:w-[296px] mx-auto">
+            <div 
+              class="w-[739px] rounded-[33px] backdrop-blur-3xl flex justify-center gap-20 py-9 place-self-center mt-56 text-white max-[900px]:w-[600px] max-[900px]:gap-10 max-sm:grid max-sm:w-[296px] max-sm:py-5 max-sm:mt-24 overflow-hidden article"
+              [class.bg-[#1d20256c]]="mode() == 'claire'"
+              [class.bg-[#ffffff27]]="mode() != 'claire'"
+            >
+                <div class="w-[277px] h-[277px] bg-[#1D2025] rounded-full p-[18px] max-sm:w-[91px] max-sm:h-[91px] max-sm:p-[8px] max-sm:mx-auto imgArticle">
+                    <img ngSrc="ux.png" alt="angular" width="237" height="248">
+                </div>
+                <div class="w-[294px] max-sm:w-[262px] descArticle">
+                    <div class="font-semibold text-3xl max-sm:text-xl">
+                        C’est quoi le UX?
+                    </div>
+                    <div class="text-base mt-10 mb-12 max-sm:text-xs max-sm:mt-5 max-sm:mb-8">
+                        Dans cette article j’explique de manière claire c’est quoi l’expérience utilisateur ainsi que les avantages  de ce dernier.
+                    </div>
+                    <div 
+                      class=" w-[220px]  h-[50px] text-2xl text-orange-500 border-[1px] border-orange-500 font-semibold bg-[#1D2025] rounded-full text-center max-sm:w-[124px] max-sm:h-8 max-sm:text-sm flex justify-center gap-3 mx-auto max-sm:items-center max-sm:pt-[1px]  cursor-pointer pt-2 animate-bounce hover:border-white duration-300 hover:text-white"
+                      routerLink="/articles/ux"
+                    >
+                        Lire l’article
+                    </div>    
+                </div>
+            </div>
+            <div 
+              class="text-base text-cyan-600 mt-8 underline underline-offset-8 mb-4 hover:text-cyan-400 duration-500 cursor-pointer"
+              routerLink="/articles"
+            >
+                Voir tous les articles
+            </div>
+        </div>
+    
+        <!-- contact -->
+        <div 
+          id="contact" 
+          class= "mt-52 font-bold text-6xl max-sm:text-3xl max-sm:mt-20" 
+          [class.text-black]="mode() == 'claire'"
+          [class.text-white]="mode() != 'claire'"
+        >
+            <div class="text-center">
+                Contactez moi
+            </div>
+            <div class="flex mt-20 justify-center gap-10 animate-bounce max-sm:gap-6 max-sm:mt-14">
+                <a href="https://wa.me/+221773782956" class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]">
+                    <img ngSrc="whats-app.svg" alt="whatsapp" width="94" height="94">
+                </a>
+                <a href="https://www.instagram.com/babs_990?igsh=MWc1Ymo0Z3ZvMHZrNw==" class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]">
+                    <img ngSrc="instagram.svg" alt="instagram" width="94" height="94">
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/serigne-khalifa-ababacar-sy-nguirane-675676273?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoysBPWGZSXiniZxeoiBenA%3D%3D"
+                  class="cursor-pointer hover:scale-[110%] duration-500 max-sm:w-[52px] max-sm:h-[52px]"
+                >
+                    <img ngSrc="LinkedIn.svg" alt="linkedIn" width="94" height="94">
+                </a>
+            </div>
+        </div>
 
-    <app-footer></app-footer>
+        <app-footer></app-footer>
+
+    }
+
 </div>

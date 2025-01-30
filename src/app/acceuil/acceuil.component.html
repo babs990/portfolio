@@ -352,14 +352,14 @@
             </div>
             <div class="grid grid-cols-[408px_408px] gap-20 mt-12 justify-center max-[970px]:grid-cols-[408px] max-sm:w-[304px] max-sm:gap-8 max-sm:mt-6 max-sm:mx-auto overflow-hidden" >
                 @for (item of Ui(); track item.numb) {
-                    <div [id]="item.idName" class="carteProjets mt-6 pt-[9px] w-[408px] h-[474px] bg-[#ffffff10] rounded-[42px] mx-auto backdrop-blur-3xl hover:shadow-ombre2 duration-500 max-sm:w-[304px] max-sm:h-[365px] max-sm:rounded-[46px] max-sm:pt-[13px]" [class.bg-[#0000005e]]="mode()=='claire'">                        
+                    <div [id]="item.idName" class="carteProjets mt-6 pt-[9px] w-[408px] h-[474px] bg-[#ffffff10] rounded-[42px] mx-auto backdrop-blur-3xl hover:shadow-ombre2 duration-500 max-sm:w-[304px] max-sm:h-[365px] max-sm:rounded-[46px] max-sm:pt-[13px]" [class.bg-zinc-500]="mode()=='claire'">                        
                         <div class="mx-auto w-[390px] max-sm:w-[274px] ">
                             <img [ngSrc]="item.img" [alt]="item.nom" width="390" height="292">
                         </div>
                         <div class="mt-5 text-2xl font-bold text-center max-sm:text-xl max-sm:font-semibold">
                             {{item.nom}}
                         </div>
-                        <div class="w-[310px] font-light mx-auto mt-[12px] mb-[20px] max-sm:text-xs max-sm:font-extralight max-sm:mt-[8px] max-sm:mb-[16.5px] max-sm:w-[235px]">
+                        <div class="w-[310px] font-light mx-auto mt-[12px] mb-[20px] max-sm:text-xs max-sm:font-extralight max-sm:mt-[8px] max-sm:mb-[17.5px] max-sm:w-[235px]">
                             {{item.description}}
                         </div>
                         <div class="flex ">
@@ -382,7 +382,6 @@
                             <div class="w-[44px] h-[41px] rounded-tl-[42px] rounded-br-[42px] bg-orange-500"></div>
                         </div>
                     </div>
-
                 }
             </div>
             <div 

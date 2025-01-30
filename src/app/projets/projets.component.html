@@ -72,7 +72,7 @@
         <div class="grid grid-cols-[408px_408px] gap-20 mt-12 justify-center max-[970px]:grid-cols-[408px] max-sm:w-[304px] max-sm:gap-8 max-sm:mt-6 max-sm:mx-auto overflow-hidden">
             @for (item of User(); track item.numb) {
                 @if (User() == projetsUi()) {
-                    <div [id]="item.idName" class="carteProjets mt-6 pt-[9px] w-[408px] h-[474px] bg-[#ffffff10] rounded-[42px] mx-auto backdrop-blur-3xl hover:shadow-ombre2 duration-500 max-sm:w-[304px] max-sm:h-[365px] max-sm:rounded-[46px] max-sm:pt-[13px]" [class.bg-[#0000005e]]="mode()=='claire'">                        
+                    <div [id]="item.idName" class="carteProjets mt-6 pt-[9px] w-[408px] h-[474px] bg-[#ffffff10] rounded-[42px] mx-auto backdrop-blur-3xl hover:shadow-ombre2 duration-500 max-sm:w-[304px] max-sm:h-[365px] max-sm:rounded-[46px] max-sm:pt-[13px]" [class.bg-black]="mode()=='claire'">                        
                         <div class="mx-auto w-[390px] max-sm:w-[274px] ">
                             <img [ngSrc]="item.img" [alt]="item.nom" width="390" height="292">
                         </div>

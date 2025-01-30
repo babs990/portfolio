@@ -50,12 +50,12 @@
     }
 
     @if (skill() == 'ux') {
-        <div id="basculer" class="w-[124px] h-[40px] border-[1px] border-orange-500 rounded-full mt-10 mx-auto flex">
+        <div id="basculer" class="w-[124px] h-[40px] outline outline-[1px] outline-orange-500 rounded-full mt-10 mx-auto flex">
             <div id="fond" class="w-[62px] h-[40px] bg-orange-500 rounded-full absolute z-0 duration-200">
             </div>
             <div 
               id="ui" 
-              class="w-[62px] h-full rounded-full text-center text-2xl text-[#fff] font-semibold content-center z-20 cursor-pointer"
+              class="w-[62px] h-full rounded-full text-center text-2xl text-[#fff] font-semibold flex flex-col justify-center z-20 cursor-pointer"
               (click)="basculerUI()"
               >
                 UI

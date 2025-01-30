@@ -79,12 +79,15 @@
         </div>
     
         <!-- Outils et technos -->
-        <div class="text-white mt-56 pb-24 max-sm:mt-24 outils max-sm:pb-12" >
-            <div class=" font-bold text-5xl text-center max-sm:text-2xl" [class.text-black]="mode() == 'claire'">
-                Outils et technologies
+        <div class=" mt-20 pb-24 max-sm:mt-12 outils max-sm:pb-12"
+          [class.text-black]="mode() == 'claire'"
+          [class.text-white]="mode() != 'claire'"
+        >
+            <div class=" font-bold text-5xl text-center max-sm:text-2xl">
+                Outils et méthodologies
             </div>
-            <div class="w-[748px] text-xl font-normal mx-auto mt-7 max-[970px]:w-[620px] max-sm:text-sm max-sm:w-[296px] max-sm:mt-6" [class.text-black]="mode() == 'claire'">
-                A travers mes projets j’ai eu à explorer pas mal de technologies et d’outils. Voici les outils avec lesquel je travail le plus et dont j’ai une certaine expertise.
+            <div class="w-[748px] text-xl font-normal mx-auto mt-7 max-[970px]:w-[620px] max-sm:text-sm max-sm:w-[296px] max-sm:mt-6">
+                A travers mes projets j’ai eu à explorer pas mal d’outils et de méthodologies de conception. Voici les outils avec lequel je travail le plus et dont j’ai une certaine expertise.
             </div>
             <div 
               class="max-[970px]:w-[700px] max-[720px]:w-[350px] max-[720px]:grid max-sm:gap-8 rounded-[48px] w-[896px] bg-[#1D2025] shadow-ombre1 border-[1px] border-[#f9731647] border-dashed mx-auto mt-10 max-sm:mt-6 flex justify-center py-14 gap-28 max-sm:py-10 text-white max-sm:w-[296px]"

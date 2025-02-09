@@ -19,7 +19,7 @@ export class AcceuilComponent implements AfterViewInit,OnInit{
 
   readonly router = inject(Router)
   readonly projets = signal(projets)
-  readonly Ui = signal(projetsUi)
+  readonly design = signal(projetsUi)
   src = localStorage.getItem('src') || ''
   mode = signal(localStorage.getItem('mode') || 'nuit')
   skill = signal(localStorage.getItem('skill'))
@@ -30,6 +30,10 @@ export class AcceuilComponent implements AfterViewInit,OnInit{
   methode = computed(()=>{
     return this.outils().filter((item)=> item.type == 'ux')
   })
+  Ui = computed(()=>{
+    return this.design().filter((item) => item.numb <=2)
+  })
+
 
 
   projets3 = computed(()=>{

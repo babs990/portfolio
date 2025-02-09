@@ -88,6 +88,16 @@ export class ProjetsComponent implements AfterViewInit {
     }
   })
 
+  gsap.from('#myafrica', {
+    opacity :0,
+    translateY : 50,
+    duration : 2,
+    delay: 2,
+    scrollTrigger:{
+      trigger :'#MBI',
+      start :'top 75%',
+    }
+  })
 
    gsap.from('#MBI', {
      translateY : 50,

@@ -90,16 +90,25 @@ export const projetsUi = [
         numb: 1,
         nom: 'Les recettes de Adja',
         idName : 'adja',
-        description : 'Design UI d’une application mobile destinée a la vente de nourriture en ligne.',
+        description : 'Design UI d’une application mobile destinée à la vente de nourriture en ligne.',
         dribbble : 'https://dribbble.com/shots/25495572-Les-recettes-de-Adja-mobile-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share',
         behance : 'https://www.behance.net/gallery/216967077/Les-recettes-de-Adja',
         img: 'Adja.png'
     },
     {
         numb: 2,
+        nom: 'My Africa',
+        idName : 'myafrica',
+        description : 'Design UI d’une application web destinée à la valorisation de la culture africaine.',
+        dribbble : 'https://dribbble.com/shots/25601285-My-Africa-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=My%20Africa%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=My%20Africa%20app&utm_medium=Social_Share',
+        behance : 'https://www.behance.net/gallery/218865945/My-Africa-app',
+        img: 'My Africa.png'
+    },
+    {
+        numb: 3,
         nom: 'B-WATCH',
         idName : 'bwatch',
-        description : 'Design UI d’une application web destinée a la vente de montre en ligne.',
+        description : 'Design UI d’une application web destinée à la vente de montre en ligne.',
         dribbble : 'https://dribbble.com/shots/25495572-Les-recettes-de-Adja-mobile-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share',
         behance : 'https://www.behance.net/gallery/209257233/B-WATCH-project',
         img: 'bwatch2.png'

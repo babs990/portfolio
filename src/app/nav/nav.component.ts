@@ -106,6 +106,8 @@ export class NavComponent implements OnInit {
   droplist(){
     if(this.element.nativeElement.querySelector('#drop').classList.contains('translate-x-full')){
       this.element.nativeElement.querySelector('#drop').classList.remove('translate-x-full')
+      this.element.nativeElement.querySelector('#drop').classList.remove('opacity-0')
+      this.element.nativeElement.querySelector('#drop').classList.add('flex')
       this.element.nativeElement.querySelector('#dropList').classList.remove('translate-x-full')
 
     }else{

@@ -113,6 +113,15 @@ export const projetsUi = [
         behance : 'https://www.behance.net/gallery/209257233/B-WATCH-project',
         img: 'bwatch2.png'
     },
+    {
+        numb: 4,
+        nom: 'Doctor app',
+        idName : 'Doctor',
+        description : 'Design UI d’une application mobile destinée à la vente de nourriture en ligne.',
+        dribbble : 'https://dribbble.com/shots/25684147-Doctor-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Doctor%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Doctor%20app&utm_medium=Social_Share',
+        behance : 'https://www.behance.net/gallery/220166797/Doctor-app',
+        img: 'Doctor.png'
+    },
 ]
 
 export const projetUx = [
@@ -123,4 +132,12 @@ export const projetUx = [
         fichier : 'sengame.pdf',
         img: 'sengame.png'
     },
+    {
+        numb: 2,
+        idName : 'Doctor',
+        nom: 'Doctor app',
+        fichier : 'https://www.behance.net/gallery/220166797/Doctor-app',
+        img: 'Doctor.png'
+    },
+
 ]

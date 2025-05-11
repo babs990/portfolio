@@ -137,7 +137,7 @@ export const projetUx = [
         idName : 'Doctor',
         nom: 'Doctor app',
         fichier : 'https://www.behance.net/gallery/220166797/Doctor-app',
-        img: 'Doctor.png'
+        img: 'Doctor2.png'
     },
 
 ]

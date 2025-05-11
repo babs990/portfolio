@@ -117,7 +117,7 @@ export const projetsUi = [
         numb: 4,
         nom: 'Doctor app',
         idName : 'Doctor',
-        description : 'Design UI d’une application mobile destinée à la vente de nourriture en ligne.',
+        description : 'Design UI d’une application mobile pour la prise de rendez-vous avec un médecin.',
         dribbble : 'https://dribbble.com/shots/25684147-Doctor-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Doctor%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Doctor%20app&utm_medium=Social_Share',
         behance : 'https://www.behance.net/gallery/220166797/Doctor-app',
         img: 'Doctor.png'

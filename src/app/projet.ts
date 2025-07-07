@@ -114,7 +114,7 @@ export const projetsUi = [
         img: 'sengameUI.png'
     },
     {
-        numb: 1,
+        numb: 4,
         nom: 'Les recettes de Adja',
         idName : 'adja',
         description : 'Design UI d’une application mobile destinée à la vente de nourriture en ligne.',
@@ -123,7 +123,7 @@ export const projetsUi = [
         img: 'Adja.png'
     },
     {
-        numb: 4,
+        numb: 5,
         nom: 'B-WATCH',
         idName : 'bwatch',
         description : 'Design UI d’une application web destinée à la vente de montre en ligne.',

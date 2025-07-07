@@ -88,15 +88,6 @@ export const outils = [
 export const projetsUi = [
     {
         numb: 1,
-        nom: 'Les recettes de Adja',
-        idName : 'adja',
-        description : 'Design UI d’une application mobile destinée à la vente de nourriture en ligne.',
-        dribbble : 'https://dribbble.com/shots/25495572-Les-recettes-de-Adja-mobile-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share',
-        behance : 'https://www.behance.net/gallery/216967077/Les-recettes-de-Adja',
-        img: 'Adja.png'
-    },
-    {
-        numb: 2,
         nom: 'My Africa',
         idName : 'myafrica',
         description : 'Design UI d’une application web destinée à la valorisation de la culture africaine.',
@@ -105,22 +96,40 @@ export const projetsUi = [
         img: 'My Africa.png'
     },
     {
-        numb: 3,
-        nom: 'B-WATCH',
-        idName : 'bwatch',
-        description : 'Design UI d’une application web destinée à la vente de montre en ligne.',
-        dribbble : 'https://dribbble.com/shots/25495572-Les-recettes-de-Adja-mobile-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share',
-        behance : 'https://www.behance.net/gallery/209257233/B-WATCH-project',
-        img: 'bwatch2.png'
-    },
-    {
-        numb: 4,
+        numb: 2,
         nom: 'Doctor app',
         idName : 'Doctor',
         description : 'Design UI d’une application mobile pour la prise de rendez-vous avec un médecin.',
         dribbble : 'https://dribbble.com/shots/25684147-Doctor-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Doctor%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Doctor%20app&utm_medium=Social_Share',
         behance : 'https://www.behance.net/gallery/220166797/Doctor-app',
         img: 'Doctor.png'
+    },
+    {
+        numb: 3,
+        nom: 'SenGame app',
+        idName : 'sengame',
+        description : 'Design UI d’une application mobile destinée à l\'achat de materiels de jeux.',
+        dribbble : 'https://dribbble.com/shots/26194998-SenGame-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=SenGame%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=SenGame%20app&utm_medium=Social_Share',
+        behance : 'https://www.behance.net/gallery/228905245/SenGame-app',
+        img: 'sengameUI.png'
+    },
+    {
+        numb: 1,
+        nom: 'Les recettes de Adja',
+        idName : 'adja',
+        description : 'Design UI d’une application mobile destinée à la vente de nourriture en ligne.',
+        dribbble : 'https://dribbble.com/shots/25495572-Les-recettes-de-Adja-mobile-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share',
+        behance : 'https://www.behance.net/gallery/216967077/Les-recettes-de-Adja',
+        img: 'Adja.png'
+    },
+    {
+        numb: 4,
+        nom: 'B-WATCH',
+        idName : 'bwatch',
+        description : 'Design UI d’une application web destinée à la vente de montre en ligne.',
+        dribbble : 'https://dribbble.com/shots/25495572-Les-recettes-de-Adja-mobile-app?utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=babs990&utm_content=Les%20recettes%20de%20Adja%20mobile%20app&utm_medium=Social_Share',
+        behance : 'https://www.behance.net/gallery/209257233/B-WATCH-project',
+        img: 'bwatch2.png'
     },
 ]
 
@@ -129,7 +138,7 @@ export const projetUx = [
         numb: 1,
         idName : 'sengame',
         nom: 'SenGame app',
-        fichier : 'sengame.pdf',
+        fichier : 'https://www.behance.net/gallery/228905245/SenGame-app',
         img: 'sengame.png'
     },
     {

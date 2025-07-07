@@ -12,9 +12,11 @@ import { gsap } from 'gsap';
 })
 export class ChoiceComponent implements AfterViewInit {
 
-  skill = signal('')
+  skill = signal('ux')
+  
 
   ngAfterViewInit(): void {
+    localStorage.setItem('skill','ux')
     gsap.from('#babs',{
       translateY : -300,
       ease: 'expo',

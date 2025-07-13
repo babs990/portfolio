@@ -11,13 +11,13 @@ export const routes: Routes = [
     {
         path: 'acceuil',
         component: AcceuilComponent,
-        title: 'Acceuil'
+        title: 'Accueil'
     },
 
     {
         path: 'choice',
         component: ChoiceComponent,
-        title: 'Acceuil'
+        title: 'Accueil'
     },
 
     {
